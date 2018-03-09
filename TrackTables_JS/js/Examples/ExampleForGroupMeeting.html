@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/media/images/favicon.ico" />
+
+		<title>DataTables example</title>
+		<style type="text/css" title="currentStyle">
+			@import "../DataTables-1.9.4/media/css/demo_page2.css";
+			@import "../DataTables-1.9.4/media/css/demo_table.css";
+		</style>
+		<script type="text/javascript" language="javascript" src="../DataTables-1.9.4/media/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="../DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
+		<script src="../Highcharts-3.0.1/js/highcharts.js"></script>
+		<script src="../Highcharts-3.0.1/js/highcharts-more.js"></script>
+		<script src="../Highcharts-3.0.1/js/modules/exporting.js"></script>
+		<script src="../TrackTables-0.0.1/tracktables_0.7.js"></script>
+	</head>
+	<body id="dt_example">
+	<header>TrackTables
+	<img src="CRUKCI-logo-web.png" ></img>
+	</header>
+		<div id="container">
+
+			<h1>File selection</h1>
+			<p>Please select files to summarise.</p>
+			<input type="file" id="fileinput" multiple></input>
+			<output id="list"></output>
+
+<script type="text/javascript">
+var RNAQCdata
+var processedCount = 0; // global variable
+var totalFiles = 0;
+
+function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == 'none') e.style.display = 'block';
+}
+
+NameIndex = [0];
+chartColnames = ["Name", "PF_BASES", "PF_ALIGNED_BASES", "RIBOSOMAL_BASES", "CODING_BASES", "UTR_BASES", "INTRONIC_BASES", "INTERGENIC_BASES", "IGNORED_READS", "CORRECT_STRAND_READS", "INCORRECT_STRAND_READS", "PCT_RIBOSOMAL_BASES", "PCT_CODING_BASES", "PCT_UTR_BASES", "PCT_INTRONIC_BASES", "PCT_INTERGENIC_BASES", "PCT_MRNA_BASES", "PCT_USABLE_BASES", "PCT_CORRECT_STRAND_READS", "MEDIAN_CV_COVERAGE", "MEDIAN_5PRIME_BIAS", "MEDIAN_3PRIME_BIAS", "MEDIAN_5_TO_3_BIAS",
+
+"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100"];
+
+var IndexForLine = [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122]
+
+function readMultipleFiles(evt) {
+    //Retrieve all the files from the FileList object
+    var files = evt.target.files;
+    totalFiles = files.length;
+    processedCount = 0
+    var output = [];
+    if (files) {
+        var k = 0
+        for (var i = 0, f; f = files[i]; i++) {
+            RNAQCdata = new Array(files.length);
+            var r = new FileReader();
+            output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                              f.size, ' bytes, last modified: ',
+                              f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                              '</li>');
+            r.onload = (function(f) {
+                return function(e) {
+                    //var RNAQCdata[i] = new Array(9)
+                    var text = e.target.result;
+                    //#var text = reader.result;
+                    //console.log(text)
+                    var n = text.split(/\r?\n/);
+                    var nSplit = n[7].split(/\t/);
+                    //console.log(nSplit);
+                    Temp = new Array(123);
+                    Temp[0] = f.name
+                    Temp[1] = nSplit[0];
+                    Temp[2] = nSplit[1];
+                    Temp[3] = nSplit[2];
+                    Temp[4] = nSplit[3];
+                    Temp[5] = nSplit[4];
+                    Temp[6] = nSplit[5];
+                    Temp[7] = nSplit[6];
+                    Temp[8] = nSplit[7];
+                    Temp[9] = nSplit[8];
+                    Temp[10] = nSplit[9];
+                    Temp[11] = nSplit[10];
+                    Temp[12] = nSplit[11];
+                    Temp[13] = nSplit[12];
+                    Temp[14] = nSplit[13];
+                    Temp[15] = nSplit[14];
+                    Temp[16] = nSplit[15];
+                    Temp[17] = nSplit[16];
+                    Temp[18] = nSplit[17];
+                    Temp[19] = nSplit[18];
+                    Temp[20] = nSplit[19];
+                    Temp[21] = nSplit[20];
+                    Temp[22] = nSplit[21].replace(/\?/g, "NA");
+                    //console.log(nSplit[21].replace(/\?/g, "NA"))
+                    for (j = 0; j < 101; j++) {
+                        var nSplit2 = n[11 + j].split(/\t/);
+                        Temp[23 + j] = nSplit2[1]
+                        //	console.log(nSplit2[1])
+                    }
+                    //console.log(k)
+                    //console.log(Temp)
+                    RNAQCdata[k] = Temp
+                    k = k + 1
+                    //alert(RNAQCdata)
+                    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+                    onLoadEndHandler();
+                    //alert(Temp)
+                    
+                };
+            })(f);
+            r.readAsText(f);
+        }
+    } else {
+        alert("Failed to load files");
+    }
+
+}
+document.getElementById('fileinput').addEventListener('change', readMultipleFiles, false);
+
+function onLoadEndHandler() {
+    processedCount++;
+    if (processedCount == totalFiles) {
+        toggle_visibility("RNAcontainer")
+        //console.log(RNAQCdata)
+        dataTablew = make2dArrayForDataTable(chartColnames, RNAQCdata, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], 0)
+        //temp = makeDataTable(dataTablew,"dynamic","example",functionAtRedraw,"")
+        $('#dynamic').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>');
+        $('#example').dataTable({
+            "aaData": dataTablew.aaData,
+            "aoColumns": dataTablew.aoColumns,
+            "aoColumnDefs": [{
+                "bSearchable": false,
+                "bVisible": false,
+                "aTargets": [2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            }, ],
+            "fnDrawCallback": functionAtRedraw
+        }).fnFilterOnReturn();
+        dataTablex = make2dArrayForDataTable(chartColnames, RNAQCdata, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], 0)
+        //temp = makeDataTable(dataTablex,"dynamic","example",functionAtRedraw,"")
+        $('#dynamic2').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="example2"></table>');
+        $('#example2').dataTable({
+            "aaData": dataTablex.aaData,
+            "aoColumns": dataTablex.aoColumns,
+            "aoColumnDefs": [{
+                "bSearchable": false,
+                "bVisible": false,
+                "aTargets": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+            }, ],
+            "fnDrawCallback": functionAtRedraw
+        }).fnFilterOnReturn();
+        dataTablej = make2dArrayForDataTable(chartColnames, RNAQCdata, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], 0)
+        $('#dynamic3').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="example3"></table>');
+        $('#example3').dataTable({
+            "aaData": dataTablej.aaData,
+            "aoColumns": dataTablej.aoColumns,
+            "aoColumnDefs": [{
+                "bSearchable": false,
+                "bVisible": false,
+                "aTargets": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 16, 17, 18, 19, 20, 21, 22]
+            }, ],
+            "fnDrawCallback": functionAtRedraw
+        }).fnFilterOnReturn();
+
+        //	console.log(dataTablew.aaData)
+        var oTable = $(".display").dataTable();
+        var aHash = '#';
+        //console.log(oTable)
+        for (j = 0; j < oTable.length; j++) {
+            //console.log(oTable[j].id)
+            tempID = aHash.concat(oTable[j].id, "_filter input")
+            $(tempID).keyup(function() {
+                //console.log(this.value)
+                oTable.fnFilterAll(this.value);
+            });
+        }
+        Bubble = make2dArrayForHighChartsBar(chartColnames, RNAQCdata, [2, 3, 4], 0)
+        //	console.log(Bubble)
+        makeHighChartBarGrouped(Bubble, "#container2")
+
+        highChartline = make2dArrayForHighChartsLine(chartColnames, RNAQCdata, IndexForLine, 0)
+        //console.log(highChartline)
+        makeHighChartLine(highChartline, "#container3")
+
+        Bubble3 = make2dArrayForHighChartsBar(chartColnames, RNAQCdata, [11, 12, 13, 14, 15], 0)
+        //console.log(Bubble)
+        makeHighChartBar(Bubble3, "#container4")
+
+
+
+    }
+}
+
+$(document).ready(function() {
+    $('#dynamic').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>');
+    $('#example').dataTable({
+        "aaData": [ /* Reduced data set */ ["NA"]
+
+        ],
+        "aoColumns": "N",
+
+    }).fnFilterOnReturn();
+
+    $('#dynamic2').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="example2"></table>');
+    $('#example2').dataTable({
+        "aaData": [ /* Reduced data set */ ["NA"]
+
+        ],
+        "aoColumns": "N"
+    }).fnFilterOnReturn();
+
+
+    $('#dynamic3').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="example3"></table>');
+    $('#example3').dataTable({
+        "aaData": [ /* Reduced data set */ ["NA"]
+
+        ],
+        "aoColumns": "N"
+    }).fnFilterOnReturn();
+
+});
+</script>
+
+<div id="RNAcontainer" style='display:none;'>
+    <h1>
+        Picard - CollectRnaSeqMetrics. <a href="http://picard.sourceforge.net/picard-metric-definitions.shtml#RnaSeqMetrics">(homepage)</a>
+    </h1>
+    <div id="dynamic"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div id="container2" style="height: 300px"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div id="dynamic2"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div id="container3" style="height: 300px"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div id="dynamic3"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div id="container4" style="height: 300px"></div>
+    <div id="container5" style="height: 300px"></div>
+</div>
+<!--<button onclick="myFunction()">Try it</button>-->
+</body>

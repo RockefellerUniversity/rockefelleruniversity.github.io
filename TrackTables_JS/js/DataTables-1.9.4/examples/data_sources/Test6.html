@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/media/images/favicon.ico" />
+
+		<title>DataTables example</title>
+		<style type="text/css" title="currentStyle">
+			@import "../../media/css/demo_page.css";
+			@import "../../media/css/demo_table.css";
+		</style>
+		<script type="text/javascript" language="javascript" src="../../media/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="../../media/js/jquery.dataTables.js"></script>
+		<script src="../../js/highcharts.js"></script>
+		<script src="../../js/modules/exporting.js"></script>
+		<script type="application/ecmascript" async="" src="https://raw.github.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+
+				<script>
+
+				/* Functions */
+		jQuery.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty ) {
+						    // check that we have a column id
+						    if ( typeof iColumn == "undefined" ) return [];
+
+						    // by default we only wany unique data
+						    if ( typeof bUnique == "undefined" ) bUnique = true;
+
+						    // by default we do want to only look at filtered data
+						    if ( typeof bFiltered == "undefined" ) bFiltered = true;
+
+						    // by default we do not wany to include empty values
+						    if ( typeof bIgnoreEmpty == "undefined" ) bIgnoreEmpty = true;
+
+						    // list of rows which we're going to loop through
+						    var aiRows;
+
+						    // use only filtered rows
+						    if (bFiltered == true) aiRows = oSettings.aiDisplay;
+						    // use all rows
+						    else aiRows = oSettings.aiDisplayMaster; // all row numbers
+
+						    // set up data array
+						    var asResultData = new Array();
+
+						    for (var i=0,c=aiRows.length; i<c; i++) {
+						        iRow = aiRows[i];
+						        var sValue = this.fnGetData(iRow, iColumn);
+
+						        // ignore empty values?
+						        if (bIgnoreEmpty == true && sValue.length == 0) continue;
+
+						        // ignore unique values?
+						        else if (bUnique == true && jQuery.inArray(sValue, asResultData) > -1) continue;
+
+						        // else push the value onto the result data array
+						        else asResultData.push(sValue);
+						    }
+
+						    return asResultData;
+		};
+
+		make2dArrayForDataTable = function (ChartColnames,Data,ChartIndex2,NameIndex) {
+
+
+										  var FullRow1=new Array(Data.length);
+										  var names1 = new Array(Data.length);
+										  var Tom1 = new Array(Data.length);
+										  var ChartCategories1 = new Array(ChartIndex2.length);
+
+
+
+
+										  for (i=0;i<Data.length;i++)
+										  {
+										    FullRow1[i] =new Array(ChartIndex2.length)
+										    names1[i] = Data[i][NameIndex];
+										    for(k=0;k<ChartIndex2.length;k++)
+										    {
+										      FullRow1[i][k] = Data[i][ChartIndex2[k]] ;
+										      ChartCategories1[k] = {"sTitle":ChartColnames[ChartIndex2[k]]}
+										    }
+										    Tom1[i] = FullRow1[i]
+										         ;
+										  }
+										  dataTable = {"aaData":Tom1,"aoColumns":ChartCategories1}
+										  return dataTable
+											console.log(dataTable)
+}
+
+
+		make2dArrayForHighChartsBar = function (ChartColnames,Data,ChartIndex,NameIndex) {
+
+
+									var tChartCategories1 = new Array(Data.length);
+									var tFullRow = new Array(ChartIndex.length)
+									var tnames = new Array(ChartIndex.length);
+									var tTom = new Array(ChartIndex.length);
+									tNameIndex = [0];
+									for(i=0;i < ChartIndex.length;i++)
+									{
+										tFullRow[i] = new Array(Data.length);
+										tnames[i] = ChartColnames[ChartIndex[i]];
+										for (k=0;k<Data.length;k++)
+										{
+											tChartCategories1[k] = Data[k][NameIndex]
+											tFullRow[i][k] = Data[k][ChartIndex[i]]
+										}
+										tTom[i] = {"name":tnames[i],
+										"data":tFullRow[i]
+										}
+									}
+									highChart = {"series":tTom,"categories":tChartCategories1}
+									return highChart
+		}
+
+makeDataTable = function (dataTable,Trial2,Trial3,crazy) {
+	$(Trial2).html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>' );
+	crazy = $(Trial3).dataTable( {
+		"aaData": dataTable["aaData"],
+		"aoColumns": dataTable["aoColumns"],
+		"fnDrawCallback": function () {
+
+			console.log("Hello");
+
+		}
+
+	} );
+	return crazy
+}
+
+makeHighChartBar = function (highChart,Trial){
+			$(Trial).highcharts({
+				chart: {
+					type: 'bar'
+				},
+				title: {
+					text: 'Stacked bar chart'
+				},
+				xAxis: {
+					categories: highChart["categories"]
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: 'Total fruit consumption'
+					}
+				},
+				legend: {
+					backgroundColor: '#FFFFFF',
+					reversed: true
+				},
+				plotOptions: {
+					series: {
+						stacking: 'normal'
+					}
+				},
+					series: highChart["series"]
+			});
+}
+
+					/* Data set */
+
+
+									NameIndex = [0];
+								    ChartColnames = ["Name",'Apples', 'Oranges',
+								                   'Pears', 'Grapes', 'Bananas'];
+
+								    Data=[["Tom",5,3,10,7,2,"C:\Users\carrol09\Desktop\carrollt\ExampleChIP\Coverage\S13-AR-CHIP-LNCAP-LM-HES6-BICALUTAMIDE.bwa_Processed.bw"],
+								    ["Bill",2, 2, 3,2, 1,"C:\Users\carrol09\Desktop\carrollt\ExampleChIP\Coverage\S11-E2F1-CHIP-LNCAP-LM-HES6-VEHICLE.bwa_Processed.bw"],
+								    ["Ted",3, 4, 4, 2, 5,"C:\Users\carrol09\Desktop\carrollt\ExampleChIP\Coverage\S12-E2F1-CHIP-LNCAP-LM-HES6-VEHICLE.bwa_Processed.bw"]
+								    ];
+
+
+
+								  	ChartIndex =[1,2,3,5];
+									var Trial = '#container2'
+
+								  	var crazy;
+									var Trial2 = '#dynamic'
+									var Trial3 = "#example"
+								  	ChartIndex2 =[0,1,2,3,4];
+
+
+
+
+var Trial2 = '#dynamic'
+var Trial3 = "#example"
+
+
+$(document).ready(function() {
+
+			dataTable = make2dArrayForDataTable(ChartColnames,Data,ChartIndex2,NameIndex)
+			crazy = makeDataTable(dataTable,Trial2,Trial3,crazy)
+
+			highChart = make2dArrayForHighChartsBar(ChartColnames,Data,ChartIndex,NameIndex)
+			makeHighChartBar(highChart,Trial)
+
+});
+
+			function myFunction()
+			{
+				console.log(crazy.fnGetColumnData(0));
+
+var XML = document.createElement("div");
+
+var Node = document.createElement("Session");
+Node.setAttribute("genome","hg19")
+Node.setAttribute("groupTracksBy","Linking_id")
+Node.setAttribute("locus","chr3:58135808-58136611")
+Node.setAttribute("version","5")
+
+ResourcesElement = document.createElement("Resources")
+
+ResourceElement = document.createElement("Resource")
+ResourceElement.setAttribute("name","AR_HS6_BIC_1_Bigwig")
+ResourceElement.setAttribute("path","C:\Users\carrol09\Desktop\carrollt\ExampleChIP\Coverage\S13-AR-CHIP-LNCAP-LM-HES6-BICALUTAMIDE.bwa_Processed.bw")
+
+PanelElement = document.createElement("Panel")
+PanelElement.setAttribute("height","40")
+PanelElement.setAttribute("name","")
+PanelElement.setAttribute("width","1115")
+
+TrackElement = document.createElement("Track")
+
+TrackElement.setAttribute("altColor","0,0,178")
+TrackElement.setAttribute("autoScale","true")
+TrackElement.setAttribute("color","0,0,178")
+TrackElement.setAttribute("displayMode","COLLAPSED")
+TrackElement.setAttribute("featureVisibilityWindow","-1")
+TrackElement.setAttribute("fontSize","10")
+TrackElement.setAttribute("id","C:/Users/carrol09/Desktop/carrollt/ExampleChIP/Coverage/S13-AR-CHIP-LNCAP-LM-HES6-BICALUTAMIDE.bwa_Processed.bw")
+TrackElement.setAttribute("name","AR_HS6_BIC_1_Bigwig")
+TrackElement.setAttribute("normalize","false")
+TrackElement.setAttribute("renderer","BAR_CHART")
+TrackElement.setAttribute("sortable","true")
+TrackElement.setAttribute("visible","true")
+TrackElement.setAttribute("windowFunction","mean")
+
+DataRangeElement = document.createElement("DataRange")
+DataRangeElement.setAttribute("altColor","0,0,178")
+DataRangeElement.setAttribute("baseline","0.0")
+DataRangeElement.setAttribute("drawBaseline","true")
+DataRangeElement.setAttribute("flipAxis","false")
+DataRangeElement.setAttribute("maximum","15.0")
+DataRangeElement.setAttribute("minimum","0.0")
+DataRangeElement.setAttribute("type","LINEAR")
+
+
+ResourcesElement.appendChild(ResourceElement);
+Node.appendChild(ResourcesElement);
+Node.appendChild(PanelElement);
+PanelElement.appendChild(TrackElement);
+TrackElement.appendChild(DataRangeElement);
+XML.appendChild(Node);
+
+var xmlText = new XMLSerializer().serializeToString(XML);
+var n = xmlText.replace("<div>","<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>")
+var n2 = n.replace("</div>","")
+var xmlTextNode = document.createTextNode(xmlText);
+var blob = new Blob([n2], { type: "text/plain" })
+	  function done(evt) {
+	    console.log("Write completed.");
+	  };
+
+MyFile = window.saveAs(
+		  blob
+		, ("igvtrial.xml"));
+		  console.log("bye");
+
+function onInitFs(fs) {
+  console.log('Opened file system: ' + fs.name);
+}
+function errorHandler(e) {
+  var msg = '';
+
+  switch (e.code) {
+    case FileError.QUOTA_EXCEEDED_ERR:
+      msg = 'QUOTA_EXCEEDED_ERR';
+      break;
+    case FileError.NOT_FOUND_ERR:
+      msg = 'NOT_FOUND_ERR';
+      break;
+    case FileError.SECURITY_ERR:
+      msg = 'SECURITY_ERR';
+      break;
+    case FileError.INVALID_MODIFICATION_ERR:
+      msg = 'INVALID_MODIFICATION_ERR';
+      break;
+    case FileError.INVALID_STATE_ERR:
+      msg = 'INVALID_STATE_ERR';
+      break;
+    default:
+      msg = 'Unknown Error';
+      break;
+  };
+
+  console.log('Error: ' + msg);
+}
+
+window.webkitStorageInfo.requestQuota(PERSISTENT, 1024*1024, function(grantedBytes) {
+  window.requestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
+}, function(e) {
+  console.log('Error', e);
+});
+
+window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+
+window.requestFileSystem(window.TEMPORARY, 5*1024*1024 /*5MB*/, onInitFs, errorHandler);
+
+		  //window.open("http://localhost:60151/load?file=/C:/Users/carrol09/Downloads/igvtrial.xml")
+}
+
+
+
+
+</script>
+
+	</head>
+	<body id="dt_example">
+		<div id="container">
+			<div class="full_width big">
+				DataTables dynamic creation example
+			</div>
+
+			<h1>Preamble</h1>
+			<p>At times you will wish to be able to create a table from dynamic information passed directly to DataTables, rather than having it read from the document. This is achieved using the "aaData" array in the initialisation object. A table node must first be created before the initialiser is called (as shown in the code below). This is also useful for optimisation - if you are able to format the data as required, this method can save a lot of DOM parsing to create a table.</p>
+
+			<h1>Live example</h1>
+			<div id="dynamic"></div>
+			<div class="spacer"></div>
+			<div id="container2" style="height: 300px"></div>
+			<button onclick="myFunction()">Try it</button>
+<script type="application/ecmascript" async="" src="C:/Users/carrol09/Desktop/Tables/FileSaver.js-master/FileSaver.js"/>
+<script type="application/ecmascript" async="" src="C:/Users/carrol09/Desktop/Tables/Blob.js-master/BlobBuilder.js"/>
+<script type="application/ecmascript" async="" src="C:/Users/carrol09/Desktop/Tables/Blob.js-master/BlobBuilder.min.js"/>
+			  </body>
+<
