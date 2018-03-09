@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>Training</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+
+
+		<script src="js/jquery.min.js"></script>
+    	<script src="js/skel.min.js"></script>
+    	<script src="js/skel-layers.min.js"></script>
+    	<script src="js/init.js"></script>		
+
+		<style type="text/css" class="init">
+		<link rel="stylesheet" href="css/style.css" />
+      	<link rel="stylesheet" href="css/style-desktop.css" />
+      	<link rel="stylesheet" href="css/skel.css" />
+		</style>
+
+
+	<link rel="stylesheet" type="text/css" href="DataTables-1.10.12/media/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="DataTables-1.10.12/examples/resources/resources/syntax/shCore.css">
+
+	<style type="text/css" class="init">
+	
+	</style>
+	<script type="text/javascript" language="javascript" src="DataTables-1.10.12/jquery-1.12.4.min.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="DataTables-1.10.12/media/js/jquery.dataTables.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="DataTables-1.10.12/examples/resources/syntax/shCore.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="DataTables-1.10.12/examples/resources/demo.js">
+	</script>
+	<script type="text/javascript" language="javascript" class="init">
+	
+
+$(document).ready(function() {
+	$('#example').DataTable({
+		"pageLength": 50,
+		"order": [[ 3, "desc" ]],
+		 columnDefs: [ 
+    	{ 'orderData':[4], 'targets': [2] },
+    	 {'targets': [4],'visible': false,'searchable': false}
+		]
+	}
+	
+	);
+} );
+
+
+	</script>	
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<div id="header-wrapper">
+				<header id="header" class="container">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Logo -->
+								<h1><a href="#upcoming" id="logo">Bioinformatics</a></h1>
+							
+							<!-- Nav -->
+								<nav id="nav">
+									<a href="training.html">Training</a>
+								</nav>
+
+						</div>
+					</div>
+				</header>
+			</div>
+
+		<!-- Content -->
+			<div id="content-wrapper">
+				<div id="content">
+					<div class="container">
+						<div class="row">
+							<div class="9u">
+									<section>
+										<header>
+											<h2>Training</h2>
+										</header>
+
+<p>The Bioinformatics team provides ad-hoc training for biologists as well as training courses covering topics such as ChIP-seq and RNA-seq analysis, data visualisation and R/Bioconductor programming.</p>
+
+<p>All course material is made publicly available and throughout (<em>2018</em>), the core will be running training for basic ChIP-seq and RNA-seq analysis, reproducible research in R and visualising data in genome browsers. For details on upcoming courses see our <a href="#upcoming">upcoming training</a> or contact Thomas Carroll (<a href="mailto:thomas.carroll@rockefeller.edu">thomas.carroll@rockefeller.edu</a>).</p>
+
+
+<p>As well as training in Bioinformatics methods, the Bioinformatics team can offer advice on the use of local compute resources (i.e. best practice in using R in cluster compute environment). </p>
+
+
+<blockquote>
+<p>Daily updates to our training material can be found at
+<a href="http://mrccsc.github.io/training">http://mrccsc.github.io/training.html</a></p>
+</blockquote>
+
+									</section>
+
+									<section>
+										<header>
+											<h2 id="upcoming">Upcoming training</h2>
+										</header>
+										<p>
+										In 2018 we will be running training on R, reproducible research, visualising data in genome browsers and analysis of RNA-seq/ChIP-seq using R and Bioconductor<br> To book a place on one of these courses please contact Thomas Carroll (<a href="mailto:thomas.carroll@rockefeller.edu">thomas.carroll@rockefeller.edu</a>)
+
+
+<br>
+Material linked below is <font color="black">for reference and example only.</font> <br>Material to be used for course will be made available to attendees only and weblinks distributed on the day of the course.
+
+<br><em style="background-color:lightgrey;font-weight:bold;">NOTE</em> <em style="font-weight:bold;">All materials are under strict licensing. Material is free for review but may not be redistributed 'as is' or modified without explicit consent. For more details contact the Head of Bioinformatics (<a href="mailto:thomas.carroll@rockefeller.edu?Subject=Licensing">Thomas Carroll - thomas.carroll@rockefeller.edu</a>) </em>
+
+
+<table id="example" class="display" cellspacing="0" width="100%">
+  <thead>
+  <tr>
+    <th>Course</th>
+    <th>Material</th>
+    <th>Dates</th>
+    <th>Availability</th>       
+  </tr>
+  </thead>
+ </tbody> 
+    <tr>
+    <td>Intro To R</td>
+    <td><a href="http://rockefelleruniversity.github.io/Intro_To_R/">Link</a>
+    <!--a href="mailto:bioinf.training@imperial.ac.uk" target="_top">Contact us</a>--></td>
+    <td>TBD</td>
+    <td><font color="black">TBD</td>
+    <td>1</td>
+  </tr>
+</tbody>
+</table>
+
+
+										</p>
+
+									</section>									
+
+
+							</div>
+							<div class="3u">
+								
+								<!-- Sidebar -->
+									<section>
+										<header>
+											<h2>Training Links</h2>
+										</header>
+										<ul class="link-list">
+											<li><a href="https://github.com/bioinformatics-core-shared-training">bioinformatics-core-shared-training</a></li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+		<!-- Footer -->
+			<div id="footer-wrapper">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="8u">
+						
+							<!-- Links -->
+								<section>
+									<h2>Quick Contacts</h2>
+									<div>
+										<div class="row">
+											<div class="3u">
+												<ul class="link-list last-child">
+													<li>Head of Bioinformatics -<br><a href="thomas.carroll@rockefeller.edu">Thomas Carroll</a></li>
+												</ul>
+											</div>
+											<div class="3u">
+												<ul class="link-list last-child">
+													<li><a href="http://">Rockefeller Homepage</a></li>
+													<li><a href="http:///">Bioinformatics</a></li>
+													<li><a href="http://">Rockefeller github site</a></li>
+												</ul>
+											</div>
+											<div class="3u">
+												<ul class="link-list last-child">
+													<p>The Bioinformatics team is located in the IT pavillion.<p>
+												</ul>
+											</div>											
+											<div class="3u">
+												<ul class="link-list last-child">
+													<p>If you want to contact us during working hours by telephone please call on <br>
+													<br>
+													For urgent enquired please contact <a href="thomas.carroll@rockefeller.edu">Thomas Carroll</a> by email.
+
+													.<p>
+												</ul>
+											</div>
+
+										</div>
+									</div>
+								</section>
+
+						</div>
+						<div class="4u">
+							
+							<!-- Blurb -->
+								<section>
+									<h2>Bioinformatics news</h2>
+									<p>
+									</p>
+								</section>
+						
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+			</div>
+
+	</body>
+</html>

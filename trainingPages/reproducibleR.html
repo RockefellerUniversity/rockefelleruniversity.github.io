@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Reproducible-r by ThomasCarroll</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Reproducible-r</h1>
+        <p class="header">Introductory course for Reproducible research in R</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/ThomasCarroll/Reproducible-R/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/ThomasCarroll/Reproducible-R/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/ThomasCarroll/Reproducible-R">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/ThomasCarroll">ThomasCarroll</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="reproducible-research-in-r" class="anchor" href="#reproducible-research-in-r" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reproducible Research in R</h1>
+
+<h2>
+<a id="the-course" class="anchor" href="#the-course" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Course</h2>
+
+<p>This course introduces R and statistical programming as well as best practices for reproducible research using R's dynamic reporting and version capture tools.</p>
+
+<p>The course consists of 3 sections, 2 on basic R and 1 on reproducibility in R.<br>
+Each section is presented as both HTMl and Rpres markdown ( to allow for intergration of the presentation in the RStudion enviroment itself).  Exercises and answer sheets are included after all subsections to practice techniques and provide future reference examples. </p>
+
+All material is available to download under GPL v2 license.</p>
+
+<p>For  information on other courses run by our team see our <a href="http://bioinformatics.csc.mrc.ac.uk/training"> MRC CSC training page</a>.</p>
+
+<h2>
+<a id="the-team" class="anchor" href="#the-team" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Team</h2>
+
+<p>This course was created and conducted by the MRC Clinical Sciences Centre Bioinformatics Team at Imperial College London, Hammersmith Hospital.<br>
+For more information on the team see our <a href="http://bioinformatics.csc.mrc.ac.uk">MRC page</a>.</p>
+
+<p>This course is free for MRC CSC and Imperial staff and students. If you would like to attend a future course contact <a href="mailto:thomas.carroll@imperial.ac.uk">thomas.carroll@imperial.ac.uk</a>.</p>
+
+<h2>
+<a id="setting-up" class="anchor" href="#setting-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up.</h2>
+
+<h4>
+<a id="install-r" class="anchor" href="#install-r" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install R.</h4>
+
+<p>R can be installed from the R-project website.<br>
+R 3.1.0 or higher is required for this course.</p>
+
+<p><a href="http://www.r-project.org/">http://www.r-project.org/</a></p>
+
+<h4>
+<a id="install-rstudio" class="anchor" href="#install-rstudio" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install RStudio.</h4>
+
+<p>RStudio can be installed from the R-project website. </p>
+
+<p><a href="http://www.rstudio.com/">http://www.rstudio.com/</a></p>
+
+<h4>
+<a id="install-required-packages" class="anchor" href="#install-required-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install required packages.</h4>
+
+<p>Having downloaded R and RStudio, some additional packages are required (rmarkdown and ggplot2).<br>
+To install these,</p>
+
+<ul>
+<li>First launch RStudio</li>
+<li>Install the packages in the R console
+<pre>
+install.packages("ggplot2",dependencies=TRUE)
+install.packages("rmarkdown",dependencies=TRUE)
+</pre>
+</li>
+</ul>
+
+<h4>
+<a id="download-the-material" class="anchor" href="#download-the-material" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download the material</h4>
+
+<p>The material can either be downloaded as a <a href="https://github.com/ThomasCarroll/Reproducible-R/archive/master.zip">zip</a></p>
+
+<pre>
+wget https://github.com/ThomasCarroll/Reproducible-R/archive/master.zip ./
+</pre>
+
+<p>or checked out from our Github repository
+<a href="https://github.com/ThomasCarroll/Reproducible-R/">https://github.com/ThomasCarroll/Reproducible-R/</a></p>
+
+<h2>
+<a id="the-r-sessions" class="anchor" href="#the-r-sessions" aria-hidden="true"><span class="octicon octicon-link"></span></a>The R Sessions</h2>
+
+<h4>
+<a id="Session1" class="anchor" href="#session1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to R, Session 1</h4>
+
+<p>This section focuses on R basics such as simple data types, data IO, plotting and statistics.<br>
+Session sections:
+  <ul>
+    <li>Introduction to R</li>
+    <li>Data Types</li>
+    <li>Reading and Writing Data</li>
+    <li>Plotting</li>
+    <li>Statistics</li>
+  </ul>
+</p>
+<iframe src="http://mrccsc.github.io/r_course/introToR_Session1.html" width="100%" height="400"></iframe>
+</span>
+<p> A single page version of this course can be found below</p>
+<a href="http://mrccsc.github.io/r_course/introToR_Session1_Document.html">Printable Session 1</a>
+
+<h4>
+<a id="Session2" class="anchor" href="#session2" aria-hidden="true"><span class="octicon octicon-link"></span>
+</a>Introduction to R, Session 2</h4>
+
+<p>In session 2, programmatic techniques such as looping and use defined functions are introduced<br>
+The session includes longer exercises and shorter slide decks and so more time should be allocated to exercises in this session.<br>
+Session sections:
+  <ul>
+    <li>Looping Conditional Branching</li>
+    <li>Data Types</li>
+    <li>Loading libraries</li>
+    <li>Writing Scripts</li>
+    <li>Getting</li>
+  </ul>
+</p>
+<iframe src="http://mrccsc.github.io/r_course/introToR_Session2.html" width="100%" height="400"></iframe>
+</span>
+<p> A single page version of this course can be found below</p>
+<a href="http://mrccsc.github.io/r_course/introToR_Session2_Document.html">Printable Session 2</a>
+
+<h4>
+<a id="reproducible-r" class="anchor" href="#reproducible-r" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to R, Session 2</h4>
+
+<p>In the Reproducible R session, the use of dynamic documents is introduced with topics such as Markdown syntax, YAML headers and rmarkdown/knitr documen rendering functions<br>
+Session sections:
+  <ul>
+    <li>Creating reports from R scripts</li>
+    <li>Markdown Syntax</li>
+    <li>Markdown in R</li>
+  </ul>
+</p>
+<iframe src="http://mrccsc.github.io/r_course/reproducibleR.html" width="100%" height="400"></iframe>
+</span>
+<p> A single page version of this course can be found below</p>
+<a href="http://mrccsc.github.io/r_course/reproducibleR_Document.html">Printable reproducible R</a>
+      </section>
+      <footer>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
