@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Begin document body -->
+<fimo version="4.12.0" release="Tue Jun 27 16:22:50 2017 -0700">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation=  xmlns:fimo="http://noble.gs.washington.edu/schema/fimo"
+>
+<command-line>/home/meme/meme_4.12.0/bin/fimo --parse-genomic-coord --verbosity 1 --oc fimo_out_13 --bgfile ./background --motif UP00095_2 db/MOUSE/uniprobe_mouse.meme ./commonEBFinB.fa</command-line>
+<settings>
+<setting name="output directory">fimo_out_13</setting>
+<setting name="MEME file name">db/MOUSE/uniprobe_mouse.meme</setting>
+<setting name="sequence file name">./commonEBFinB.fa</setting>
+<setting name="background file name">./background</setting>
+<setting name="allow clobber">true</setting>
+<setting name="compute q-values">true</setting>
+<setting name="parse genomic coord.">true</setting>
+<setting name="text only">false</setting>
+<setting name="scan both strands">true</setting>
+<setting name="output threshold">0.0001</setting>
+<setting name="threshold type">p-value</setting>
+<setting name="max stored scores">100000</setting>
+<setting name="pseudocount">0.1</setting>
+<setting name="verbosity">1</setting>
+<setting name="selected motif">UP00095_2</setting>
+</settings>
+<sequence-data num-sequences="3379" num-residues="337900" />
+<alphabet name="DNA" like="dna">
+<letter id="A" symbol="A" complement="T" name="Adenine" colour="CC0000"/>
+<letter id="C" symbol="C" complement="G" name="Cytosine" colour="0000CC"/>
+<letter id="G" symbol="G" complement="C" name="Guanine" colour="FFB300"/>
+<letter id="T" symbol="T" aliases="U" complement="A" name="Thymine" colour="008000"/>
+<letter id="N" symbol="N" aliases="X." equals="ACGT" name="Any base"/>
+<letter id="V" symbol="V" equals="ACG" name="Not T"/>
+<letter id="H" symbol="H" equals="ACT" name="Not G"/>
+<letter id="D" symbol="D" equals="AGT" name="Not C"/>
+<letter id="B" symbol="B" equals="CGT" name="Not A"/>
+<letter id="M" symbol="M" equals="AC" name="Amino"/>
+<letter id="R" symbol="R" equals="AG" name="Purine"/>
+<letter id="W" symbol="W" equals="AT" name="Weak"/>
+<letter id="S" symbol="S" equals="CG" name="Strong"/>
+<letter id="Y" symbol="Y" equals="CT" name="Pyrimidine"/>
+<letter id="K" symbol="K" equals="GT" name="Keto"/>
+</alphabet>
+<motif name="UP00078_1" alt="Arid3a_primary" width="17" best-possible-match="GGGTTTAATTAAAATTC"/>
+<motif name="UP00059_1" alt="Arid5a_primary" width="14" best-possible-match="CTAATATTGCTAAA"/>
+<motif name="UP00099_1" alt="Ascl2_primary" width="17" best-possible-match="CTCAGCAGCTGCTCCTG"/>
+<motif name="UP00020_1" alt="Atf1_primary" width="16" best-possible-match="ACGATGACGTCATCGA"/>
+<motif name="UP00012_1" alt="Bbx_primary" width="15" best-possible-match="TAATTCAATGAAGTG"/>
+<motif name="UP00043_1" alt="Bcl6b_primary" width="16" best-possible-match="TCTTTCGAGGAATTTG"/>
+<motif name="UP00050_1" alt="Bhlhb2_primary" width="22" best-possible-match="GGAAGAGTCACGTGACCAATAC"/>
+<motif name="UP00001_1" alt="E2F2_primary" width="15" best-possible-match="ATAAAGGCGCGCGAT"/>
+<motif name="UP00003_1" alt="E2F3_primary" width="15" best-possible-match="ATAAGGGCGCGCGAT"/>
+<motif name="UP00007_1" alt="Egr1_primary" width="14" best-possible-match="TCCGCCCCCGCATT"/>
+<motif name="UP00015_1" alt="Ehf_primary" width="15" best-possible-match="AGGACCCGGAAGTAA"/>
+<motif name="UP00090_1" alt="Elf3_primary" width="13" best-possible-match="TACAAGGAAGTAA"/>
+<motif name="UP00068_1" alt="Eomes_primary" width="17" best-possible-match="TAAAAGGTGTGAAAATT"/>
+<motif name="UP00079_1" alt="Esrra_primary" width="17" best-possible-match="TATTCAAGGTCATGCGA"/>
+<motif name="UP00073_1" alt="Foxa2_primary" width="17" best-possible-match="AAAAAGTAAACAAAGAC"/>
+<motif name="UP00041_1" alt="Foxj1_primary" width="16" best-possible-match="AAAGTAAACAAAAATT"/>
+<motif name="UP00039_1" alt="Foxj3_primary" width="17" best-possible-match="AAAAAGTAAACAAACCC"/>
+<motif name="UP00025_1" alt="Foxk1_primary" width="17" best-possible-match="AAAATGTAAACAAACAG"/>
+<motif name="UP00061_1" alt="Foxl1_primary" width="17" best-possible-match="TAAATGTAAACAAAGGT"/>
+<motif name="UP00013_1" alt="Gabpa_primary" width="17" best-possible-match="CAATACCGGAAGTGTAA"/>
+<motif name="UP00032_1" alt="Gata3_primary" width="22" best-possible-match="TTTTTAGAGATAAGAAATAAAG"/>
+<motif name="UP00080_1" alt="Gata5_primary" width="17" best-possible-match="TAAACTGATAAGAAGAT"/>
+<motif name="UP00100_1" alt="Gata6_primary" width="17" best-possible-match="TATAGAGATAAGAATTG"/>
+<motif name="UP00070_1" alt="Gcm1_primary" width="16" best-possible-match="TCGTACCCGCATCATT"/>
+<motif name="UP00024_1" alt="Glis2_primary" width="16" best-possible-match="TATCGACCCCCCACAG"/>
+<motif name="UP00042_1" alt="Gm397_primary" width="17" best-possible-match="CAGATGTGCACATACGT"/>
+<motif name="UP00084_1" alt="Gmeb1_primary" width="17" best-possible-match="GAGTGTACGTACGATGG"/>
+<motif name="UP00055_1" alt="Hbp1_primary" width="16" best-possible-match="ACTATGAATGAATGAT"/>
+<motif name="UP00035_1" alt="Hic1_primary" width="16" best-possible-match="ACTATGCCAACCTACC"/>
+<motif name="UP00066_1" alt="Hnf4a_primary" width="17" best-possible-match="CTTCAGGGGTCAATTGA"/>
+<motif name="UP00063_1" alt="Hoxa3_primary" width="14" best-possible-match="TGGAGGTAATTAAC"/>
+<motif name="UP00072_1" alt="IRC900814_primary" width="16" best-possible-match="ATTTACGACAAATAGC"/>
+<motif name="UP00086_1" alt="Irf3_primary" width="14" best-possible-match="GAGAACCGAAACTG"/>
+<motif name="UP00018_1" alt="Irf4_primary" width="15" best-possible-match="CGTATCGAAACCAAA"/>
+<motif name="UP00040_1" alt="Irf5_primary" width="15" best-possible-match="ATAAACCGAAACCAA"/>
+<motif name="UP00011_1" alt="Irf6_primary" width="17" best-possible-match="CTGATCGAAACCAAAGT"/>
+<motif name="UP00074_1" alt="Isgf3g_primary" width="15" best-possible-match="CAAAATCGAAACTAA"/>
+<motif name="UP00103_1" alt="Jundm2_primary" width="16" best-possible-match="CCGATGACGTCATCGT"/>
+<motif name="UP00093_1" alt="Klf7_primary" width="16" best-possible-match="TCGACCCCGCCCCTAT"/>
+<motif name="UP00067_1" alt="Lef1_primary" width="17" best-possible-match="AATCCCTTTGATCTATC"/>
+<motif name="UP00045_1" alt="Mafb_primary" width="17" best-possible-match="AAATTTGCTGACTTAGC"/>
+<motif name="UP00044_1" alt="Mafk_primary" width="15" best-possible-match="TAAAAATGCTGACTT"/>
+<motif name="UP00060_1" alt="Max_primary" width="16" best-possible-match="TGACCACGTGGTCGGG"/>
+<motif name="UP00097_1" alt="Mtf1_primary" width="16" best-possible-match="GGGCCGTGTGCAAAAA"/>
+<motif name="UP00092_1" alt="Myb_primary" width="17" best-possible-match="ATGGAAACCGTTATTTT"/>
+<motif name="UP00081_1" alt="Mybl1_primary" width="17" best-possible-match="TTGAAAACCGTTAATTT"/>
+<motif name="UP00036_1" alt="Myf6_primary" width="16" best-possible-match="GAAGAACAGGTGTCCG"/>
+<motif name="UP00017_1" alt="Nkx3-1_primary" width="17" best-possible-match="CTTAACCACTTAAGGAT"/>
+<motif name="UP00009_1" alt="Nr2f2_primary" width="16" best-possible-match="TCTCAAAGGTCACGAG"/>
+<motif name="UP00027_1" alt="Osr1_primary" width="16" best-possible-match="TTTTACAGTAGCAAAA"/>
+<motif name="UP00052_1" alt="Osr2_primary" width="16" best-possible-match="ATGTACAGTAGCAAAG"/>
+<motif name="UP00088_1" alt="Plagl1_primary" width="16" best-possible-match="TTGGGGGCGCCCCTAG"/>
+<motif name="UP00048_1" alt="Rara_primary" width="16" best-possible-match="TCTCAAAGGTCACCTG"/>
+<motif name="UP00098_1" alt="Rfx3_primary" width="23" best-possible-match="TGTGACCCTTAGCAACCGATTAA"/>
+<motif name="UP00056_1" alt="Rfx4_primary" width="15" best-possible-match="TACCATAGCAACGGT"/>
+<motif name="UP00076_1" alt="Rfxdc2_primary" width="15" best-possible-match="CCGCATAGCAACGGA"/>
+<motif name="UP00053_1" alt="Rxra_primary" width="17" best-possible-match="TGTCGTGACCCCTTAAT"/>
+<motif name="UP00085_1" alt="Sfpi1_primary" width="14" best-possible-match="TTAAGAGGAAGTTA"/>
+<motif name="UP00008_1" alt="Six6_primary" width="17" best-possible-match="AATAGGGTATCATATAT"/>
+<motif name="UP00000_1" alt="Smad3_primary" width="17" best-possible-match="CAAATCCAGACATCAGA"/>
+<motif name="UP00030_1" alt="Sox11_primary" width="17" best-possible-match="ATAAGAACAAAGGACTA"/>
+<motif name="UP00101_1" alt="Sox12_primary" width="14" best-possible-match="TAATTGTTCTAAAC"/>
+<motif name="UP00096_1" alt="Sox13_primary" width="16" best-possible-match="TTAAGAACAATAATTT"/>
+<motif name="UP00004_1" alt="Sox14_primary" width="16" best-possible-match="GCTAATTATAATTATC"/>
+<motif name="UP00075_1" alt="Sox15_primary" width="17" best-possible-match="TAGTGAACAATAGATTT"/>
+<motif name="UP00014_1" alt="Sox17_primary" width="15" best-possible-match="ATAAACAATTAATCA"/>
+<motif name="UP00064_1" alt="Sox18_primary" width="16" best-possible-match="TTCAATTGTTCTAAAA"/>
+<motif name="UP00069_1" alt="Sox1_primary" width="16" best-possible-match="AATCAATTCAATAATT"/>
+<motif name="UP00071_1" alt="Sox21_primary" width="16" best-possible-match="TTTAATTATAATTAAG"/>
+<motif name="UP00023_1" alt="Sox30_primary" width="16" best-possible-match="ATTGAACAATGGAATT"/>
+<motif name="UP00062_1" alt="Sox4_primary" width="17" best-possible-match="AGAAGAACAAAGGACTA"/>
+<motif name="UP00091_1" alt="Sox5_primary" width="16" best-possible-match="TTTAGAACAATAAAAT"/>
+<motif name="UP00034_1" alt="Sox7_primary" width="22" best-possible-match="AATAAAGAACAATAGAATTTCA"/>
+<motif name="UP00051_1" alt="Sox8_primary" width="17" best-possible-match="TTATCTATTGTTCTTTA"/>
+<motif name="UP00049_1" alt="Sp100_primary" width="14" best-possible-match="ATTTTACGGAAAAT"/>
+<motif name="UP00002_1" alt="Sp4_primary" width="17" best-possible-match="GGTCCCGCCCCCTTCTC"/>
+<motif name="UP00038_1" alt="Spdef_primary" width="16" best-possible-match="GTACATCCGGATTTTT"/>
+<motif name="UP00077_1" alt="Srf_primary" width="14" best-possible-match="TTCCATATATGGAA"/>
+<motif name="UP00016_1" alt="Sry_primary" width="16" best-possible-match="TATAATTATAATATTC"/>
+<motif name="UP00029_1" alt="Tbp_primary" width="16" best-possible-match="TCTTTATATATAAATA"/>
+<motif name="UP00089_1" alt="Tcf1_primary" width="17" best-possible-match="ACTTAGTTAACTAAAAA"/>
+<motif name="UP00058_1" alt="Tcf3_primary" width="17" best-possible-match="TATAGATCAAAGGAAAA"/>
+<motif name="UP00054_1" alt="Tcf7_primary" width="17" best-possible-match="TATAGATCAAAGGAAAA"/>
+<motif name="UP00083_1" alt="Tcf7l2_primary" width="17" best-possible-match="ATTTCCTTTGATCTATA"/>
+<motif name="UP00005_1" alt="Tcfap2a_primary" width="15" best-possible-match="ATTCCCTGAGGGGAA"/>
+<motif name="UP00010_1" alt="Tcfap2b_primary" width="14" best-possible-match="TTGCCCTAGGGCAT"/>
+<motif name="UP00087_1" alt="Tcfap2c_primary" width="15" best-possible-match="ATTGCCTGAGGCGAA"/>
+<motif name="UP00028_1" alt="Tcfap2e_primary" width="15" best-possible-match="ATTGCCTGAGGCGAT"/>
+<motif name="UP00046_1" alt="Tcfe2a_primary" width="17" best-possible-match="ATCCACAGGTGCGAAAA"/>
+<motif name="UP00019_1" alt="Zbtb12_primary" width="17" best-possible-match="CTAAGGTTCTAGATCAC"/>
+<motif name="UP00031_1" alt="Zbtb3_primary" width="17" best-possible-match="AATCGCACTGCATTCCG"/>
+<motif name="UP00047_1" alt="Zbtb7b_primary" width="15" best-possible-match="AAGCCCCCCAAAAAT"/>
+<motif name="UP00037_1" alt="Zfp105_primary" width="15" best-possible-match="AACAAACAACAAGAG"/>
+<motif name="UP00094_1" alt="Zfp128_primary" width="17" best-possible-match="TCTTTGGCGTACCCTAA"/>
+<motif name="UP00065_1" alt="Zfp161_primary" width="16" best-possible-match="TGGCGCGCGCGCCTGA"/>
+<motif name="UP00082_1" alt="Zfp187_primary" width="14" best-possible-match="TTATGTACTAATAA"/>
+<motif name="UP00021_1" alt="Zfp281_primary" width="15" best-possible-match="TCCCCCCCCCCCCCC"/>
+<motif name="UP00033_1" alt="Zfp410_primary" width="17" best-possible-match="TATTATGGGATGGATAA"/>
+<motif name="UP00095_1" alt="Zfp691_primary" width="17" best-possible-match="CGAACAGTGCTCACTAT"/>
+<motif name="UP00022_1" alt="Zfp740_primary" width="16" best-possible-match="CCCCCCCCCCCACTTG"/>
+<motif name="UP00102_1" alt="Zic1_primary" width="14" best-possible-match="CACCCCCGGGGGGG"/>
+<motif name="UP00057_1" alt="Zic2_primary" width="15" best-possible-match="CCCCCCCGGGGGGGT"/>
+<motif name="UP00006_1" alt="Zic3_primary" width="15" best-possible-match="CCCCCCCGGGGGGGT"/>
+<motif name="UP00026_1" alt="Zscan4_primary" width="17" best-possible-match="TACATGTGCACATAAAA"/>
+<motif name="UP00078_2" alt="Arid3a_secondary" width="15" best-possible-match="ACCCGTATCAAATTT"/>
+<motif name="UP00059_2" alt="Arid5a_secondary" width="17" best-possible-match="CGTACAATACGAAATAA"/>
+<motif name="UP00099_2" alt="Ascl2_secondary" width="16" best-possible-match="CTATCCCCGCCCTATT"/>
+<motif name="UP00020_2" alt="Atf1_secondary" width="14" best-possible-match="GAATGACGAATAAC"/>
+<motif name="UP00012_2" alt="Bbx_secondary" width="17" best-possible-match="TGATTGTTAACAGTTGG"/>
+<motif name="UP00043_2" alt="Bcl6b_secondary" width="16" best-possible-match="ATCCCCGCCCCTAAAA"/>
+<motif name="UP00050_2" alt="Bhlhb2_secondary" width="23" best-possible-match="TGTCGTTACACGTGGAAGGCGGT"/>
+<motif name="UP00001_2" alt="E2F2_secondary" width="17" best-possible-match="CGTTCGGCGCCAAAAGG"/>
+<motif name="UP00003_2" alt="E2F3_secondary" width="17" best-possible-match="CGCTCGGCGCCAAAAGC"/>
+<motif name="UP00007_2" alt="Egr1_secondary" width="16" best-possible-match="TGCGGAGTGGGACTGG"/>
+<motif name="UP00015_2" alt="Ehf_secondary" width="16" best-possible-match="TAGTATTTCCGATCTT"/>
+<motif name="UP00090_2" alt="Elf3_secondary" width="17" best-possible-match="GTTCAAAAAAAAAATTC"/>
+<motif name="UP00068_2" alt="Eomes_secondary" width="16" best-possible-match="GCGGAGGTGTCGCCTC"/>
+<motif name="UP00079_2" alt="Esrra_secondary" width="17" best-possible-match="GGCGAGGGGTCAAGGGC"/>
+<motif name="UP00073_2" alt="Foxa2_secondary" width="15" best-possible-match="AAAAATAACAAACGG"/>
+<motif name="UP00041_2" alt="Foxj1_secondary" width="15" best-possible-match="ATGTCACAACAACAC"/>
+<motif name="UP00039_2" alt="Foxj3_secondary" width="17" best-possible-match="AACACCAAAACAAAGGA"/>
+<motif name="UP00025_2" alt="Foxk1_secondary" width="15" best-possible-match="CAAACAACAACACCT"/>
+<motif name="UP00061_2" alt="Foxl1_secondary" width="16" best-possible-match="ATATCAAAACAAAACA"/>
+<motif name="UP00013_2" alt="Gabpa_secondary" width="16" best-possible-match="CCGTCTTCCCCCTCAC"/>
+<motif name="UP00032_2" alt="Gata3_secondary" width="22" best-possible-match="TTTTGTAGATTTTATCGACTTA"/>
+<motif name="UP00080_2" alt="Gata5_secondary" width="17" best-possible-match="GACAGAGATATCAGTTT"/>
+<motif name="UP00100_2" alt="Gata6_secondary" width="17" best-possible-match="GCGGCGATATCGCAGCG"/>
+<motif name="UP00070_2" alt="Gcm1_secondary" width="17" best-possible-match="TGCGCATAGGGGAGGAG"/>
+<motif name="UP00024_2" alt="Glis2_secondary" width="14" best-possible-match="AATATTAATAAAGA"/>
+<motif name="UP00042_2" alt="Gm397_secondary" width="16" best-possible-match="AGCGGCACACACGCAA"/>
+<motif name="UP00084_2" alt="Gmeb1_secondary" width="16" best-possible-match="TGGGCGACGTCGTTAA"/>
+<motif name="UP00055_2" alt="Hbp1_secondary" width="17" best-possible-match="TGTTCCCATTGTGTACT"/>
+<motif name="UP00035_2" alt="Hic1_secondary" width="16" best-possible-match="GGGTGTGCCCAAAAGG"/>
+<motif name="UP00066_2" alt="Hnf4a_secondary" width="16" best-possible-match="TGCAAAAGTCCAATAT"/>
+<motif name="UP00063_2" alt="Hoxa3_secondary" width="14" best-possible-match="AAAAACCATTAAGG"/>
+<motif name="UP00072_2" alt="IRC900814_secondary" width="16" best-possible-match="ATGGAAAGTCGTAAAA"/>
+<motif name="UP00086_2" alt="Irf3_secondary" width="14" best-possible-match="GGAGAAAGGTGCGA"/>
+<motif name="UP00018_2" alt="Irf4_secondary" width="15" best-possible-match="AGTATTCTCGGTTGC"/>
+<motif name="UP00040_2" alt="Irf5_secondary" width="15" best-possible-match="TTGATCGAGAATTCC"/>
+<motif name="UP00011_2" alt="Irf6_secondary" width="15" best-possible-match="ACCACTCTCGGTCAC"/>
+<motif name="UP00074_2" alt="Isgf3g_secondary" width="14" best-possible-match="GCAAAACATTACTA"/>
+<motif name="UP00103_2" alt="Jundm2_secondary" width="16" best-possible-match="ATTGATGAGTCACCAA"/>
+<motif name="UP00093_2" alt="Klf7_secondary" width="17" best-possible-match="AAGCATACGCCCAACTT"/>
+<motif name="UP00067_2" alt="Lef1_secondary" width="16" best-possible-match="GAAGATCAATCACTTA"/>
+<motif name="UP00045_2" alt="Mafb_secondary" width="15" best-possible-match="CAATTGCAAAAATAT"/>
+<motif name="UP00044_2" alt="Mafk_secondary" width="15" best-possible-match="GAAAAAATTGCAAGG"/>
+<motif name="UP00060_2" alt="Max_secondary" width="14" best-possible-match="GTGCCACGCGACTG"/>
+<motif name="UP00097_2" alt="Mtf1_secondary" width="14" best-possible-match="AAATAAGAAAAAAC"/>
+<motif name="UP00092_2" alt="Myb_secondary" width="16" best-possible-match="CGACCAACTGCCATGC"/>
+<motif name="UP00081_2" alt="Mybl1_secondary" width="15" best-possible-match="CGACCAACTGCCGTG"/>
+<motif name="UP00036_2" alt="Myf6_secondary" width="15" best-possible-match="AGCAACAGCCGCACC"/>
+<motif name="UP00017_2" alt="Nkx3-1_secondary" width="17" best-possible-match="ACTCCAAGTACTTGGAA"/>
+<motif name="UP00009_2" alt="Nr2f2_secondary" width="16" best-possible-match="CGCGCCGGGTCACGTA"/>
+<motif name="UP00027_2" alt="Osr1_secondary" width="16" best-possible-match="ACATGCTACCTAATAC"/>
+<motif name="UP00052_2" alt="Osr2_secondary" width="16" best-possible-match="ACTTGCTACCTACACC"/>
+<motif name="UP00088_2" alt="Plagl1_secondary" width="17" best-possible-match="GCTGGGGGGTACCCCTT"/>
+<motif name="UP00048_2" alt="Rara_secondary" width="16" best-possible-match="AGAGCGGGGTCAAGTA"/>
+<motif name="UP00098_2" alt="Rfx3_secondary" width="23" best-possible-match="ACTGACGCTTGGTTACCACAAAG"/>
+<motif name="UP00056_2" alt="Rfx4_secondary" width="15" best-possible-match="TACCCTAGTTACCGA"/>
+<motif name="UP00076_2" alt="Rfxdc2_secondary" width="17" best-possible-match="CTACTTGGATACGGAAT"/>
+<motif name="UP00053_2" alt="Rxra_secondary" width="16" best-possible-match="TCGCGAAGGTTGTACT"/>
+<motif name="UP00085_2" alt="Sfpi1_secondary" width="14" best-possible-match="CAAATTCCGGAACC"/>
+<motif name="UP00008_2" alt="Six6_secondary" width="17" best-possible-match="ATGGGATATATCCGCCT"/>
+<motif name="UP00000_2" alt="Smad3_secondary" width="17" best-possible-match="TACGCCCCGCCACTCTG"/>
+<motif name="UP00030_2" alt="Sox11_secondary" width="14" best-possible-match="AAAATTGTTATGAA"/>
+<motif name="UP00101_2" alt="Sox12_secondary" width="16" best-possible-match="AAATAGACAAAGGAAT"/>
+<motif name="UP00096_2" alt="Sox13_secondary" width="17" best-possible-match="GTATTGGGTGGGTATTT"/>
+<motif name="UP00004_2" alt="Sox14_secondary" width="15" best-possible-match="CTCACACAATGGCGC"/>
+<motif name="UP00075_2" alt="Sox15_secondary" width="15" best-possible-match="TTGAATGAAATTCGA"/>
+<motif name="UP00014_2" alt="Sox17_secondary" width="17" best-possible-match="GACCACATTCATACAAT"/>
+<motif name="UP00064_2" alt="Sox18_secondary" width="16" best-possible-match="GGACTGAATTCATGCC"/>
+<motif name="UP00069_2" alt="Sox1_secondary" width="15" best-possible-match="CTATAATTGTTATCG"/>
+<motif name="UP00071_2" alt="Sox21_secondary" width="17" best-possible-match="CATCAATTGTTCCGCTA"/>
+<motif name="UP00023_2" alt="Sox30_secondary" width="16" best-possible-match="TAAGATTATAATACGG"/>
+<motif name="UP00062_2" alt="Sox4_secondary" width="17" best-possible-match="GGAAAAATTGTTAGGAA"/>
+<motif name="UP00091_2" alt="Sox5_secondary" width="15" best-possible-match="TATCATAATTAAGGA"/>
+<motif name="UP00034_2" alt="Sox7_secondary" width="22" best-possible-match="GTGCTAATTGTGTGTGTACGCT"/>
+<motif name="UP00051_2" alt="Sox8_secondary" width="14" best-possible-match="ACATTCATGACACG"/>
+<motif name="UP00049_2" alt="Sp100_secondary" width="15" best-possible-match="TCCGTCGCTTAAAAG"/>
+<motif name="UP00002_2" alt="Sp4_secondary" width="15" best-possible-match="CAAAGGCGTGGCCAG"/>
+<motif name="UP00038_2" alt="Spdef_secondary" width="16" best-possible-match="GATAACATCCTAGTAG"/>
+<motif name="UP00077_2" alt="Srf_secondary" width="17" best-possible-match="GTTAAAAAAAAAAATTT"/>
+<motif name="UP00016_2" alt="Sry_secondary" width="17" best-possible-match="TCACGGAACAATAGGTG"/>
+<motif name="UP00029_2" alt="Tbp_secondary" width="15" best-possible-match="CCGATTTAAGCGATC"/>
+<motif name="UP00089_2" alt="Tcf1_secondary" width="14" best-possible-match="TTGCCCGGATTAGG"/>
+<motif name="UP00058_2" alt="Tcf3_secondary" width="15" best-possible-match="AGCCGAAAAAAAAAT"/>
+<motif name="UP00054_2" alt="Tcf7_secondary" width="15" best-possible-match="CCGTATTATAAACAA"/>
+<motif name="UP00083_2" alt="Tcf7l2_secondary" width="16" best-possible-match="GAAGATCAATCACTAA"/>
+<motif name="UP00005_2" alt="Tcfap2a_secondary" width="14" best-possible-match="TCACCTCTGGGCAG"/>
+<motif name="UP00010_2" alt="Tcfap2b_secondary" width="15" best-possible-match="ATTGCCTCAGGCAAT"/>
+<motif name="UP00087_2" alt="Tcfap2c_secondary" width="14" best-possible-match="CCGCCCAAGGGCAG"/>
+<motif name="UP00028_2" alt="Tcfap2e_secondary" width="14" best-possible-match="TACTGGAAAAAAAA"/>
+<motif name="UP00046_2" alt="Tcfe2a_secondary" width="17" best-possible-match="AAGGCCAGATGGTCCGG"/>
+<motif name="UP00019_2" alt="Zbtb12_secondary" width="15" best-possible-match="TATCATTAGAACGCT"/>
+<motif name="UP00031_2" alt="Zbtb3_secondary" width="16" best-possible-match="CAATCACTGGCAGAAT"/>
+<motif name="UP00047_2" alt="Zbtb7b_secondary" width="17" best-possible-match="CTTAAGACCACCATTAC"/>
+<motif name="UP00037_2" alt="Zfp105_secondary" width="17" best-possible-match="GTGGTTCAATAATTTTG"/>
+<motif name="UP00094_2" alt="Zfp128_secondary" width="14" best-possible-match="TGTATATATATACC"/>
+<motif name="UP00065_2" alt="Zfp161_secondary" width="14" best-possible-match="GCCGCGCAGTGCGT"/>
+<motif name="UP00082_2" alt="Zfp187_secondary" width="16" best-possible-match="GAGCCCTTGTCCCTTG"/>
+<motif name="UP00021_2" alt="Zfp281_secondary" width="17" best-possible-match="AGGAGACCCCCAATTTG"/>
+<motif name="UP00033_2" alt="Zfp410_secondary" width="17" best-possible-match="TCACCCCGCCCCTAATT"/>
+<motif name="UP00095_2" alt="Zfp691_secondary" width="17" best-possible-match="TACGAGACTCCTCTAAC"/>
+<motif name="UP00022_2" alt="Zfp740_secondary" width="17" best-possible-match="AAATTCCCCCCGGAAGT"/>
+<motif name="UP00102_2" alt="Zic1_secondary" width="15" best-possible-match="CCACACAGCAGGAGA"/>
+<motif name="UP00057_2" alt="Zic2_secondary" width="15" best-possible-match="CCACACAGCAGGAGA"/>
+<motif name="UP00006_2" alt="Zic3_secondary" width="15" best-possible-match="GAGCACAGCAGGACA"/>
+<motif name="UP00026_2" alt="Zscan4_secondary" width="16" best-possible-match="CGAAGCACACAAAATA"/>
+<motif name="UP00108_1" alt="Alx3_3418.2" width="17" best-possible-match="TAAACTAATTAGCTGAG"/>
+<motif name="UP00187_1" alt="Alx4_1744.1" width="17" best-possible-match="CGCATTAATTAATTACC"/>
+<motif name="UP00152_1" alt="Arx_1738.2" width="17" best-possible-match="GTCCATTAATTAATGGA"/>
+<motif name="UP00228_1" alt="Bapx1_2343.1" width="17" best-possible-match="CATAACCACTTAACAAC"/>
+<motif name="UP00166_1" alt="Barhl1_2590.2" width="16" best-possible-match="AACAACCAATTAATTC"/>
+<motif name="UP00145_1" alt="Barhl2_3868.1" width="16" best-possible-match="AAAAACCAATTAAGAA"/>
+<motif name="UP00181_1" alt="Barx1_2877.1" width="16" best-possible-match="AAAGTAATTAGTGAAT"/>
+<motif name="UP00151_1" alt="Barx2_3447.2" width="16" best-possible-match="TAAGTAATTAGTTATA"/>
+<motif name="UP00138_1" alt="Bsx_3483.2" width="16" best-possible-match="CAGGTAATTACCTCAG"/>
+<motif name="UP00209_1" alt="Cart1_0997.1" width="17" best-possible-match="CGAATTAATTAATCACC"/>
+<motif name="UP00209_2" alt="Cart1_1275.1" width="17" best-possible-match="CGCATTAATTAATTGGC"/>
+<motif name="UP00240_1" alt="Cdx1_2245.1" width="16" best-possible-match="TAAGGTAATAAAATTA"/>
+<motif name="UP00133_1" alt="Cdx2_4272.1" width="16" best-possible-match="AACGGTAATAAAATTT"/>
+<motif name="UP00198_1" alt="Cphx_3484.1" width="14" best-possible-match="ATGATCGAATCAAA"/>
+<motif name="UP00176_1" alt="Crx_3485.1" width="16" best-possible-match="CGTTGGGGATTAGCCT"/>
+<motif name="UP00219_1" alt="Cutl1_3494.1" width="17" best-possible-match="ACCGGTTGATCACCTGA"/>
+<motif name="UP00219_2" alt="Cutl1_3494.2" width="15" best-possible-match="TAATGATGATCACTA"/>
+<motif name="UP00255_1" alt="Dbx1_3486.1" width="17" best-possible-match="TAATTAATTAATAATTA"/>
+<motif name="UP00218_1" alt="Dbx2_3487.1" width="16" best-possible-match="TTTAATTAATTAATTC"/>
+<motif name="UP00202_1" alt="Dlx1_1741.2" width="14" best-possible-match="CTGAGGTAATTAAT"/>
+<motif name="UP00126_1" alt="Dlx2_2273.2" width="16" best-possible-match="GGAATAATTACTTCAG"/>
+<motif name="UP00154_1" alt="Dlx3_1030.1" width="17" best-possible-match="TCGCGATAATTACCGAC"/>
+<motif name="UP00110_1" alt="Dlx4_3488.2" width="17" best-possible-match="TCGCTATAATTACCGAC"/>
+<motif name="UP00230_1" alt="Dlx5_3419.2" width="16" best-possible-match="GGGGTAATTAGCTCTG"/>
+<motif name="UP00111_1" alt="Dmbx1_2277.1" width="17" best-possible-match="TGAACCGGATTAATGAA"/>
+<motif name="UP00232_1" alt="Dobox4_3956.2" width="17" best-possible-match="TAAATAGATACCCCATA"/>
+<motif name="UP00143_1" alt="Dobox5_3493.1" width="17" best-possible-match="GGAAGGGATTAATTATC"/>
+<motif name="UP00227_1" alt="Duxl_1286.2" width="17" best-possible-match="CGACCCAATCAACGGTG"/>
+<motif name="UP00201_1" alt="Emx2_3420.1" width="17" best-possible-match="ACCACTAATTAGTGGAC"/>
+<motif name="UP00167_1" alt="En1_3123.2" width="16" best-possible-match="GCGAACTAATTAATGC"/>
+<motif name="UP00163_1" alt="En2_0952.1" width="17" best-possible-match="TGCACTAATTAGTGGAA"/>
+<motif name="UP00251_1" alt="Esx1_3124.2" width="17" best-possible-match="ATCCATTAATTAATTGA"/>
+<motif name="UP00162_1" alt="Evx1_3952.2" width="17" best-possible-match="AGAACTAATTAGTGGAC"/>
+<motif name="UP00132_1" alt="Evx2_2645.3" width="17" best-possible-match="CACCGCTAATTAGCGTT"/>
+<motif name="UP00204_1" alt="Gbx1_2883.2" width="17" best-possible-match="TGCCACTAATTAGTGTA"/>
+<motif name="UP00131_1" alt="Gbx2_3110.1" width="17" best-possible-match="AGCGCTAATTAGCGATT"/>
+<motif name="UP00112_1" alt="Gsc_2327.3" width="17" best-possible-match="AATCGTTAATCCCTTTA"/>
+<motif name="UP00127_1" alt="Gsh2_3990.2" width="16" best-possible-match="AGGTTAATTAGCTGAT"/>
+<motif name="UP00148_1" alt="Hdx_3845.3" width="17" best-possible-match="AAGGCGAAATCATCGCA"/>
+<motif name="UP00225_1" alt="Hlx1_2350.1" width="15" best-possible-match="CCATAATTAATTACA"/>
+<motif name="UP00123_1" alt="Hlxb9_3422.1" width="16" best-possible-match="GTACTAATTAGTGGCG"/>
+<motif name="UP00161_1" alt="Hmbox1_2674.1" width="17" best-possible-match="GAAAACTAGTTAACATC"/>
+<motif name="UP00104_1" alt="Hmx1_3423.1" width="17" best-possible-match="ACAAGCAATTAATGAAT"/>
+<motif name="UP00155_1" alt="Hmx2_3424.3" width="17" best-possible-match="ACAAGCAATTAAAGAAT"/>
+<motif name="UP00157_1" alt="Hmx3_3490.2" width="17" best-possible-match="ACAAGCAATTAAAGAAT"/>
+<motif name="UP00114_1" alt="Homez_1063.2" width="17" best-possible-match="AAAACATCGTTTTTAAG"/>
+<motif name="UP00264_1" alt="Hoxa1_3425.1" width="16" best-possible-match="CTGAGCTAATTACCGT"/>
+<motif name="UP00217_1" alt="Hoxa10_2318.1" width="16" best-possible-match="TAGGTAATAAAATTCA"/>
+<motif name="UP00246_1" alt="Hoxa11_2218.1" width="16" best-possible-match="TAAAGTCGTAAAACAT"/>
+<motif name="UP00183_1" alt="Hoxa13_3126.1" width="16" best-possible-match="AAAGCTCGTAAAATTT"/>
+<motif name="UP00174_1" alt="Hoxa2_3079.1" width="16" best-possible-match="AAGGTAATTAGCTCAT"/>
+<motif name="UP00391_1" alt="Hoxa3_2783.2" width="14" best-possible-match="TTGAGGTAATTAGT"/>
+<motif name="UP00196_1" alt="Hoxa4_3426.1" width="17" best-possible-match="GATTATTAATTAACTTG"/>
+<motif name="UP00189_1" alt="Hoxa5_3415.1" width="16" best-possible-match="ACGGTAATTAGCTCAG"/>
+<motif name="UP00182_1" alt="Hoxa6_1040.1" width="16" best-possible-match="AAGGTAATTACCTAAT"/>
+<motif name="UP00164_1" alt="Hoxa7_2668.2" width="17" best-possible-match="CGAGTTAATTAATAAGC"/>
+<motif name="UP00164_2" alt="Hoxa7_3750.1" width="16" best-possible-match="GTAGTAATTAATGGAA"/>
+<motif name="UP00213_1" alt="Hoxa9_2622.2" width="17" best-possible-match="ACGGCCATAAAATTAAT"/>
+<motif name="UP00134_1" alt="Hoxb13_3479.1" width="16" best-possible-match="AACCCAATAAAATTCG"/>
+<motif name="UP00137_1" alt="Hoxb3_1720.2" width="17" best-possible-match="TGAGCTAATTAGTTGGA"/>
+<motif name="UP00144_1" alt="Hoxb4_2627.1" width="17" best-possible-match="CGCGTTAATTAATTACC"/>
+<motif name="UP00214_1" alt="Hoxb5_3122.2" width="16" best-possible-match="ACGGTAATTAGCTCAT"/>
+<motif name="UP00259_1" alt="Hoxb6_3428.2" width="16" best-possible-match="TATTGGTAATTACCTT"/>
+<motif name="UP00206_1" alt="Hoxb7_3953.1" width="16" best-possible-match="GTAGTAATTAATGCAA"/>
+<motif name="UP00263_1" alt="Hoxb8_3780.2" width="16" best-possible-match="ACCGGCAATTAATAAA"/>
+<motif name="UP00207_1" alt="Hoxb9_3413.1" width="16" best-possible-match="GGAGCCATAAAATTCG"/>
+<motif name="UP00245_1" alt="Hoxc10_2779.2" width="16" best-possible-match="TAAAGTCGTAAAACGT"/>
+<motif name="UP00235_1" alt="Hoxc11_3718.2" width="16" best-possible-match="TAAAGTCGTAAAATAG"/>
+<motif name="UP00135_1" alt="Hoxc12_3480.1" width="17" best-possible-match="TTAGGTCGTAAAATTTC"/>
+<motif name="UP00173_1" alt="Hoxc13_3127.1" width="16" best-possible-match="AAAGCTCGTAAAATTT"/>
+<motif name="UP00113_1" alt="Hoxc4_3491.1" width="17" best-possible-match="CGAATTAATTAACAATA"/>
+<motif name="UP00252_1" alt="Hoxc5_2630.2" width="17" best-possible-match="CGAATTAATTAATTACT"/>
+<motif name="UP00260_1" alt="Hoxc6_3954.2" width="17" best-possible-match="CAAATTAATTAATAAAA"/>
+<motif name="UP00242_1" alt="Hoxc8_3429.2" width="16" best-possible-match="TTGGGGTAATTAACGT"/>
+<motif name="UP00197_1" alt="Hoxc9_2367.2" width="16" best-possible-match="GGAGGTCATTAATTAT"/>
+<motif name="UP00140_1" alt="Hoxd1_3448.1" width="17" best-possible-match="TAAACTAATTAGCTGTA"/>
+<motif name="UP00121_1" alt="Hoxd10_2368.2" width="17" best-possible-match="AATGCAATAAAATTTAT"/>
+<motif name="UP00117_1" alt="Hoxd11_3873.1" width="17" best-possible-match="TAAGGTCGTAAAATCCT"/>
+<motif name="UP00177_1" alt="Hoxd12_3481.1" width="17" best-possible-match="CAAGGTCGTAAAATCTT"/>
+<motif name="UP00180_1" alt="Hoxd13_2356.1" width="16" best-possible-match="CTACCAATAAAATTCT"/>
+<motif name="UP00241_1" alt="Hoxd3_1742.2" width="16" best-possible-match="TTGAGTTAATTAACCT"/>
+<motif name="UP00168_1" alt="Hoxd8_2644.1" width="17" best-possible-match="TAATTAATTAATGGCTA"/>
+<motif name="UP00124_1" alt="Ipf1_3815.1" width="16" best-possible-match="AAGGTAATTAGCTCAT"/>
+<motif name="UP00236_1" alt="Irx2_0900.3" width="17" best-possible-match="TAAATACATGTAAAATT"/>
+<motif name="UP00223_1" alt="Irx3_0920.1" width="17" best-possible-match="AAAATACATGTAATACT"/>
+<motif name="UP00223_2" alt="Irx3_2226.1" width="17" best-possible-match="AATATACATGTAATATT"/>
+<motif name="UP00194_1" alt="Irx4_2242.3" width="17" best-possible-match="AATATACATGTAAAACA"/>
+<motif name="UP00250_1" alt="Irx5_2385.1" width="17" best-possible-match="TATATACATGTAAAATT"/>
+<motif name="UP00150_1" alt="Irx6_2623.2" width="17" best-possible-match="AAAATACATGTAAAAAT"/>
+<motif name="UP00170_1" alt="Isl2_3430.1" width="16" best-possible-match="CAAAATCAATTAATTT"/>
+<motif name="UP00243_1" alt="Isx_3445.1" width="16" best-possible-match="ACTCCTAATTAGTCGT"/>
+<motif name="UP00120_1" alt="Lbx2_3869.2" width="17" best-possible-match="TGCATTAATTAATGCGA"/>
+<motif name="UP00262_1" alt="Lhx1_2240.2" width="17" best-possible-match="CGAATTAATTAATAATG"/>
+<motif name="UP00115_1" alt="Lhx2_0953.2" width="17" best-possible-match="TAAACTAATTAGTGAAC"/>
+<motif name="UP00130_1" alt="Lhx3_3431.1" width="17" best-possible-match="GTAATTAATTAAATAAT"/>
+<motif name="UP00261_1" alt="Lhx4_1719.2" width="17" best-possible-match="TAAACTAATTAGCTTTG"/>
+<motif name="UP00212_1" alt="Lhx5_2279.1" width="17" best-possible-match="CGAATTAATTAAATACT"/>
+<motif name="UP00256_1" alt="Lhx6_2272.1" width="17" best-possible-match="GAGCGTTAATTAATGTA"/>
+<motif name="UP00256_2" alt="Lhx6_3432.1" width="17" best-possible-match="TCCACTAATTAGCGGTT"/>
+<motif name="UP00184_1" alt="Lhx8_2247.2" width="17" best-possible-match="ACCCCTAATTAGCGGTG"/>
+<motif name="UP00175_1" alt="Lhx9_3492.1" width="17" best-possible-match="CCCATTAATTAATCACC"/>
+<motif name="UP00188_1" alt="Lmx1a_2238.2" width="17" best-possible-match="CGAATTAATTAAAAACC"/>
+<motif name="UP00169_1" alt="Lmx1b_3433.2" width="17" best-possible-match="AGTTTTTAATTAATTTG"/>
+<motif name="UP00186_1" alt="Meis1_2335.1" width="16" best-possible-match="AAGGAGCTGTCAATAC"/>
+<motif name="UP00233_1" alt="Meox1_2310.2" width="16" best-possible-match="GAGGTAATTACCTCAG"/>
+<motif name="UP00226_1" alt="Mrg1_2246.2" width="16" best-possible-match="AAAGACCTGTCAATAC"/>
+<motif name="UP00210_1" alt="Mrg2_2302.1" width="16" best-possible-match="AATTACCTGTCAATAC"/>
+<motif name="UP00234_1" alt="Msx1_3031.2" width="16" best-possible-match="TGCAACTAATTAATTC"/>
+<motif name="UP00156_1" alt="Msx2_3449.1" width="17" best-possible-match="GAAGACCAATTAGCGCT"/>
+<motif name="UP00171_1" alt="Msx3_3206.1" width="16" best-possible-match="CAAAACCAATTAATTT"/>
+<motif name="UP00220_1" alt="Nkx1-1_3856.3" width="17" best-possible-match="TGCGCTAATTAGTGGGA"/>
+<motif name="UP00139_1" alt="Nkx1-2_3214.1" width="17" best-possible-match="GTGCACTAATTAGTGCA"/>
+<motif name="UP00231_1" alt="Nkx2-2_2823.1" width="17" best-possible-match="TTAACCACTTGAAAATT"/>
+<motif name="UP00190_1" alt="Nkx2-3_3435.1" width="16" best-possible-match="CTTTAAGTACTTAATG"/>
+<motif name="UP00107_1" alt="Nkx2-4_3074.1" width="16" best-possible-match="TAAGCCACTTGAAATT"/>
+<motif name="UP00249_1" alt="Nkx2-5_3436.1" width="16" best-possible-match="TAAGCCACTTGAATTT"/>
+<motif name="UP00147_1" alt="Nkx2-6_3437.1" width="16" best-possible-match="TAAGCCACTTAACATT"/>
+<motif name="UP00119_1" alt="Nkx2-9_3082.1" width="17" best-possible-match="TTTTAAGTACTTAAATT"/>
+<motif name="UP00389_1" alt="Nkx3-1_2923.2" width="17" best-possible-match="TACTAAGTACTTAAATG"/>
+<motif name="UP00200_1" alt="Nkx6-1_2825.1" width="17" best-possible-match="GAAAATTAATTACTTCG"/>
+<motif name="UP00200_2" alt="Nkx6-1_2825.2" width="16" best-possible-match="AGTAATTAATTACTTC"/>
+<motif name="UP00238_1" alt="Nkx6-3_3446.1" width="17" best-possible-match="GATAATTAATTACTTTG"/>
+<motif name="UP00216_1" alt="Obox1_3970.2" width="17" best-possible-match="TTAAGGGGATTAACTAC"/>
+<motif name="UP00239_1" alt="Obox2_3438.2" width="17" best-possible-match="TGAGGGGGATTAACTAT"/>
+<motif name="UP00160_1" alt="Obox3_3439.1" width="17" best-possible-match="TGAGGGGGATTAACTAT"/>
+<motif name="UP00208_1" alt="Obox5_2284.1" width="17" best-possible-match="TAGAGGGATTAAATTTC"/>
+<motif name="UP00208_2" alt="Obox5_3963.2" width="17" best-possible-match="GATAATTAATCCCTCTT"/>
+<motif name="UP00109_1" alt="Obox6_3440.2" width="15" best-possible-match="AAAAACGGATTATTG"/>
+<motif name="UP00178_1" alt="Og2x_3719.1" width="17" best-possible-match="CGCGCTAATTAGGTATC"/>
+<motif name="UP00237_1" alt="Otp_3496.1" width="17" best-possible-match="CGTAATTAATTAATTGG"/>
+<motif name="UP00229_1" alt="Otx1_2325.1" width="17" best-possible-match="GGAGGGGATTAATTTAT"/>
+<motif name="UP00267_1" alt="Otx2_3441.1" width="17" best-possible-match="TGTAGGGATTAATTGTC"/>
+<motif name="UP00247_1" alt="Pax4_3989.2" width="17" best-possible-match="TGAACTAATTAGCCCAC"/>
+<motif name="UP00224_1" alt="Pax6_3838.3" width="16" best-possible-match="TGATTAATTAATTGAC"/>
+<motif name="UP00248_1" alt="Pax7_3783.1" width="17" best-possible-match="CGAACTAATTAGTACTA"/>
+<motif name="UP00185_1" alt="Pbx1_3203.1" width="17" best-possible-match="TCACCCATCAATAATCA"/>
+<motif name="UP00221_1" alt="Phox2a_3947.1" width="16" best-possible-match="CAGCATTAATTAGTAG"/>
+<motif name="UP00149_1" alt="Phox2b_3948.1" width="17" best-possible-match="CGGAATTAATTAATAGG"/>
+<motif name="UP00153_1" alt="Pitx1_2312.1" width="17" best-possible-match="TTAGAGGGATTAACAAT"/>
+<motif name="UP00125_1" alt="Pitx2_2274.3" width="17" best-possible-match="TGAAGGGATTAATCATC"/>
+<motif name="UP00265_1" alt="Pitx3_3497.2" width="16" best-possible-match="AGGGGGATTAGCTGCC"/>
+<motif name="UP00203_1" alt="Pknox1_2364.2" width="16" best-possible-match="AAAGACCTGTCAATCC"/>
+<motif name="UP00205_1" alt="Pknox2_3077.2" width="16" best-possible-match="AAGCACCTGTCAATAT"/>
+<motif name="UP00158_1" alt="Pou1f1_3818.1" width="17" best-possible-match="GATTAATTAATTAAGTC"/>
+<motif name="UP00254_1" alt="Pou2f1_3081.2" width="16" best-possible-match="ATGTATTAATTAAGTA"/>
+<motif name="UP00191_1" alt="Pou2f2_3748.1" width="16" best-possible-match="TTGTATGCAAATTAGA"/>
+<motif name="UP00179_1" alt="Pou2f3_3986.2" width="16" best-possible-match="TTGTATGCAAATTAGA"/>
+<motif name="UP00129_1" alt="Pou3f1_3819.1" width="17" best-possible-match="AATTAATTAATTAATTC"/>
+<motif name="UP00128_1" alt="Pou3f2_2824.1" width="17" best-possible-match="GATAATTAATTAGTTTG"/>
+<motif name="UP00211_1" alt="Pou3f3_3235.2" width="17" best-possible-match="AAAATATGCATAATAAA"/>
+<motif name="UP00105_1" alt="Pou3f4_3773.1" width="17" best-possible-match="AATTAATTAATTAATTC"/>
+<motif name="UP00118_1" alt="Pou4f3_2791.1" width="16" best-possible-match="AGTTATTAATGAGGTC"/>
+<motif name="UP00146_1" alt="Pou6f1_1731.2" width="17" best-possible-match="GACGATAATGAGGTTGC"/>
+<motif name="UP00146_2" alt="Pou6f1_3733.1" width="17" best-possible-match="AAACATAATGAGGTTGC"/>
+<motif name="UP00172_1" alt="Prop1_3949.1" width="17" best-possible-match="CGAATTAATTAAGAAAC"/>
+<motif name="UP00266_1" alt="Prrx1_3442.1" width="17" best-possible-match="GTAACTAATTAACTACT"/>
+<motif name="UP00136_1" alt="Prrx2_3072.1" width="17" best-possible-match="AAAGCTAATTAGCGAAA"/>
+<motif name="UP00253_1" alt="Rax_3443.1" width="17" best-possible-match="TGCACTAATTAGCGCAC"/>
+<motif name="UP00193_1" alt="Rhox11_1765.2" width="17" best-possible-match="AAGACGCTGTAAAGCGA"/>
+<motif name="UP00193_2" alt="Rhox11_2205.1" width="17" best-possible-match="AGGACGCTGTAAAGGGA"/>
+<motif name="UP00116_1" alt="Rhox6_4251.1" width="17" best-possible-match="TGCCTTAATTAATGCTC"/>
+<motif name="UP00257_1" alt="Shox2_2641.2" width="17" best-possible-match="CGCGTTAATTAATTGTG"/>
+<motif name="UP00192_1" alt="Six1_0935.2" width="17" best-possible-match="GATGGGGTATCATTTTT"/>
+<motif name="UP00159_1" alt="Six2_2307.2" width="17" best-possible-match="AATGGGGTATCACTTTT"/>
+<motif name="UP00195_1" alt="Six3_1732.2" width="17" best-possible-match="GATAGGGTATCACTTAT"/>
+<motif name="UP00199_1" alt="Six4_2860.1" width="17" best-possible-match="ATAAATGACACCTATCA"/>
+<motif name="UP00388_1" alt="Six6_2267.4" width="17" best-possible-match="AATAGGGTATCAATTAT"/>
+<motif name="UP00388_2" alt="Six6_2267.5" width="17" best-possible-match="AATAGGGTATCAATATT"/>
+<motif name="UP00390_1" alt="Tcf1_2666.2" width="17" best-possible-match="CCTTAGTTAACTAAAAT"/>
+<motif name="UP00222_1" alt="Tcf2_0913.2" width="17" best-possible-match="AGCTGTTAACTAGCCGT"/>
+<motif name="UP00122_1" alt="Tgif1_2342.2" width="17" best-possible-match="GATATTGACAGCTGCGT"/>
+<motif name="UP00258_1" alt="Tgif2_3451.1" width="16" best-possible-match="AACTAGCTGTCAATAC"/>
+<motif name="UP00165_1" alt="Titf1_1722.2" width="16" best-possible-match="TAAGCCACTTGAAATT"/>
+<motif name="UP00244_1" alt="Tlx2_3498.2" width="17" best-possible-match="TAATTAATTAATAACTT"/>
+<motif name="UP00142_1" alt="Uncx4.1_2281.2" width="17" best-possible-match="CATAATTAATTAACGCG"/>
+<motif name="UP00215_1" alt="Vax1_3499.1" width="16" best-possible-match="ACGTTAATTAACCCAG"/>
+<motif name="UP00106_1" alt="Vax2_3500.1" width="16" best-possible-match="GTGCACTAATTAAGAC"/>
+<motif name="UP00141_1" alt="Vsx1_1728.1" width="17" best-possible-match="CGAGTTAATTAATAATT"/>
+<background source="./background">
+<value letter="A">0.219</value>
+<value letter="C">0.281</value>
+<value letter="G">0.281</value>
+<value letter="T">0.219</value>
+</background>
+<cisml-file>cisml.xml</cisml-file>
+</fimo>

@@ -1,0 +1,24 @@
+# 1-order Markov frequencies from file ./commonEBFinB.fa
+# seqs: 3379    min: 100    max: 100    avg: 100.0    sum: 337900    alph: DNA
+# order 0
+A 2.185e-01
+C 2.815e-01
+G 2.815e-01
+T 2.185e-01
+# order 1
+AA 4.789e-02
+AC 5.270e-02
+AG 8.387e-02
+AT 3.396e-02
+CA 7.826e-02
+CC 9.563e-02
+CG 2.386e-02
+CT 8.387e-02
+GA 6.461e-02
+GC 6.872e-02
+GG 9.563e-02
+GT 5.270e-02
+TA 2.753e-02
+TC 6.461e-02
+TG 7.826e-02
+TT 4.789e-02

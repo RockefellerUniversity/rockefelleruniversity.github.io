@@ -1,0 +1,71 @@
+MOTIF_INDEX	MOTIF_SOURCE	MOTIF_ID	ALT_ID	CONSENSUS	WIDTH	SITES	E-VALUE	E-VALUE_SOURCE	MOST_SIMILAR_MOTIF_SOURCE	MOST_SIMILAR_MOTIF	URL
+1	MEME	STCCCCWGGGACHN	MEME-1	STCCCCWGGGACHN	14	585	6.0e-889	MEME	db/EUKARYOTE/jolma2013.meme	EBF1_full	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=EBF1_full
+2	DREME	CCCYWGRG	DREME-1	CCCYWGRG	8	2602	8.1e-539	DREME	db/EUKARYOTE/jolma2013.meme	EBF1_full	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=EBF1_full
+3	db/EUKARYOTE/jolma2013.meme	EBF1_full	 	ATTCCCHWGGGAMT	14	3088	2.2e-272	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=EBF1_full
+4	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0154.3	EBF1	ATTCCCHWGGGAMT	14	3062	6.0e-272	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0154.3
+5	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0056.1	MZF1	BGGGGA	6	3016	5.8e-090	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0056.1
+6	db/MOUSE/uniprobe_mouse.meme	UP00057_1	Zic2_primary	NMCCCCCGGGGGGGT	15	1977	3.1e-089	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00057
+7	db/MOUSE/uniprobe_mouse.meme	UP00087_1	Tcfap2c_primary	WWHSCCYSRGGSRAN	15	1950	1.2e-084	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00087
+8	db/MOUSE/uniprobe_mouse.meme	UP00005_1	Tcfap2a_primary	WDTSCCYSRGGSRAN	15	2069	1.7e-084	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00005
+9	db/MOUSE/uniprobe_mouse.meme	UP00006_1	Zic3_primary	BMCCCCCGGGGGGGB	15	1904	1.6e-078	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00006
+10	DREME	MGGAAR	DREME-2	MGGAAR	6	1664	2.2e-077	DREME	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0149.1 (EWSR1-FLI1)	http://jaspar2018.genereg.net/matrix/MA0149.1
+11	MEME	RRSAGGAAGTG	MEME-2	RRSAGGAAGTG	11	188	5.8e-072	MEME	db/EUKARYOTE/jolma2013.meme	ETV6_full_2	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=ETV6_full_2
+12	db/EUKARYOTE/jolma2013.meme	TFAP2C_DBD_1	 	YGCCYBVRGGCA	12	1983	1.2e-069	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2C_DBD_1
+13	db/MOUSE/uniprobe_mouse.meme	UP00102_1	Zic1_primary	BHCCCCCGGGGGGG	14	1798	1.5e-069	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00102
+14	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0524.2	TFAP2C	YGCCYBVRGGCA	12	1952	1.9e-067	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0524.2
+15	db/MOUSE/uniprobe_mouse.meme	UP00022_2	Zfp740_secondary	DRDTWCCCCCCGGRRVY	17	1712	6.4e-064	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00022
+16	db/MOUSE/uniprobe_mouse.meme	UP00010_1	Tcfap2b_primary	WYGCCYBARGGCAN	14	1634	2.1e-059	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00010
+17	db/MOUSE/uniprobe_mouse.meme	UP00028_1	Tcfap2e_primary	WNHGCCTSAGGCDAN	15	1603	1.3e-057	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00028
+18	db/EUKARYOTE/jolma2013.meme	TFAP2C_full_1	 	HGCCCBVRGGCA	12	2340	2.2e-056	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2C_full_1
+19	db/EUKARYOTE/jolma2013.meme	TFAP2B_DBD_1	 	YGCCCBVRGGCA	12	1789	3.3e-051	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2B_DBD_1
+20	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0811.1	TFAP2B	YGCCCBVRGGCA	12	1770	1.2e-050	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0811.1
+21	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA1117.1	RELB	RDATTCCCCNN	11	1784	6.3e-037	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA1117.1
+22	DREME	RCCACR	DREME-3	RCCACR	6	1308	1.9e-036	DREME	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0493.1 (Klf1)	http://jaspar2018.genereg.net/matrix/MA0493.1
+23	db/EUKARYOTE/jolma2013.meme	TFAP2A_DBD_5	 	TGCCCBVRGGCA	12	1488	4.5e-035	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2A_DBD_5
+24	DREME	TCCCADGA	DREME-4	TCCCADGA	8	311	3.0e-032	DREME	 	 	 
+25	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0810.1	TFAP2A(var.2)	YGCCCBVRGGCR	12	1586	2.6e-030	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0810.1
+26	db/EUKARYOTE/jolma2013.meme	TFAP2A_DBD_1	 	YGCCCBVRGGCR	12	1611	3.7e-030	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2A_DBD_1
+27	DREME	CAKCTGY	DREME-5	CAKCTGY	7	638	3.2e-027	DREME	db/EUKARYOTE/jolma2013.meme	Ascl2_DBD	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=Ascl2_DBD
+28	DREME	CCHCGGGR	DREME-6	CCHCGGGR	8	286	1.1e-026	DREME	db/MOUSE/uniprobe_mouse.meme	UP00057_1 (Zic2_primary)	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00057
+29	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0519.1	Stat5a::Stat5b	DTTTCCMAGAA	11	1138	3.6e-023	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0519.1
+30	DREME	CCCATGGG	DREME-7	CCCATGGG	8	133	9.3e-020	DREME	db/EUKARYOTE/jolma2013.meme	EBF1_full	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=EBF1_full
+31	db/EUKARYOTE/jolma2013.meme	Tcfap2a_DBD_1	 	TGCCCYVRGGCA	12	1221	1.2e-018	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=Tcfap2a_DBD_1
+32	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA1102.1	CTCFL	CRSCAGGGGGCRSB	14	1155	1.3e-017	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA1102.1
+33	db/EUKARYOTE/jolma2013.meme	TFAP2C_DBD_3	 	TGCCCYSRGGGCA	13	536	4.6e-011	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2C_DBD_3
+34	db/EUKARYOTE/jolma2013.meme	TFAP2A_DBD_6	 	TGCCCYSRGGGCA	13	583	7.5e-011	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2A_DBD_6
+35	db/EUKARYOTE/jolma2013.meme	TFAP2B_DBD_3	 	TGCCCYBRGGGCA	13	549	1.7e-010	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2B_DBD_3
+36	db/EUKARYOTE/jolma2013.meme	HINFP1_full_1	 	CARCGTCCGCKN	12	574	2.0e-009	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=HINFP1_full_1
+37	DREME	AMAYA	DREME-8	AMAYA	5	1881	2.1e-009	DREME	 	 	 
+38	db/EUKARYOTE/jolma2013.meme	Tcfap2a_DBD_2	 	HGCCYSAGGCD	11	1133	2.7e-009	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=Tcfap2a_DBD_2
+39	db/EUKARYOTE/jolma2013.meme	Tcfap2a_DBD_3	 	TGCCCYBRGGGCA	13	623	4.0e-009	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=Tcfap2a_DBD_3
+40	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0131.2	HINFP	CARCGTCCGCKN	12	558	8.4e-009	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0131.2
+41	DREME	TCCCYGGA	DREME-9	TCCCYGGA	8	149	1.8e-008	DREME	db/EUKARYOTE/jolma2013.meme	NFATC1_full_3	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=NFATC1_full_3
+42	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0812.1	TFAP2B(var.2)	HGCCTSAGGCD	11	864	3.0e-008	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0812.1
+43	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0003.3	TFAP2A	HGCCYSAGGCD	11	1280	6.8e-008	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0003.3
+44	db/EUKARYOTE/jolma2013.meme	TFAP2A_DBD_2	 	HGCCYSAGGCD	11	1310	3.2e-007	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2A_DBD_2
+45	db/EUKARYOTE/jolma2013.meme	TFAP2B_DBD_2	 	HGCCTSAGGCD	11	920	3.3e-007	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2B_DBD_2
+46	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0163.1	PLAG1	GGGGCCCWAGGGGG	14	353	4.3e-006	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0163.1
+47	DREME	CAHTTCCC	DREME-10	CAHTTCCC	8	112	7.4e-006	DREME	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0062.2 (Gabpa)	http://jaspar2018.genereg.net/matrix/MA0062.2
+48	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0463.1	Bcl6	DTTCCTRGAAAGCH	14	899	7.9e-006	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0463.1
+49	DREME	CCCCRCCC	DREME-11	CCCCRCCC	8	169	5.5e-005	DREME	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0599.1 (KLF5)	http://jaspar2018.genereg.net/matrix/MA0599.1
+50	db/EUKARYOTE/jolma2013.meme	TFAP2A_DBD_4	 	HGCCTSAGGCD	11	1003	6.5e-005	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2A_DBD_4
+51	db/EUKARYOTE/jolma2013.meme	TFAP2A_DBD_3	 	WGCCCYBVGGGCD	13	613	9.3e-005	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2A_DBD_3
+52	DREME	CTGTVAC	DREME-12	CTGTVAC	7	235	1.2e-004	DREME	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA1114.1 (PBX3)	http://jaspar2018.genereg.net/matrix/MA1114.1
+53	db/EUKARYOTE/jolma2013.meme	TFAP2C_full_2	 	TGCCCBSRGGGCA	13	260	2.1e-004	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2C_full_2
+54	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0107.1	RELA	GGGRATTTCC	10	449	2.6e-004	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0107.1
+55	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0101.1	REL	BGGRNWTTCC	10	1253	4.0e-004	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0101.1
+56	DREME	ACGY	DREME-13	ACGY	4	1114	4.1e-004	DREME	 	 	 
+57	db/MOUSE/uniprobe_mouse.meme	UP00005_2	Tcfap2a_secondary	YHRCCYBWGGKCWB	14	2358	5.5e-004	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00005
+58	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0814.1	TFAP2C(var.2)	HGCCTSAGGCD	11	1082	7.9e-004	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0814.1
+59	db/MOUSE/uniprobe_mouse.meme	UP00011_2	Irf6_secondary	NBBACTCYCGGKHDN	15	1906	7.9e-004	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00011
+60	db/MOUSE/uniprobe_mouse.meme	UP00088_1	Plagl1_primary	BNGGGGGSSCCCCNVN	16	679	7.9e-004	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00088
+61	db/MOUSE/uniprobe_mouse.meme	UP00265_1	Pitx3_3497.2	VGGGGGATTAGCTRSC	16	361	8.7e-004	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00265
+62	db/MOUSE/uniprobe_mouse.meme	UP00176_1	Crx_3485.1	YBWWGGGGATTARCCK	16	367	1.1e-003	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00176
+63	db/EUKARYOTE/jolma2013.meme	TFAP2C_DBD_2	 	HGCCTSAGGCD	11	1103	1.6e-003	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=TFAP2C_DBD_2
+64	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0527.1	ZBTB33	BTCTCGCGAGABYTS	15	268	7.5e-003	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0527.1
+65	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0509.1	Rfx1	GTYNCCATGGCAAC	14	607	7.6e-003	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0509.1
+66	db/MOUSE/uniprobe_mouse.meme	UP00095_2	Zfp691_secondary	DANKWGACTCCTYNNMV	17	1390	1.6e-002	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00095
+67	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0116.1	Znf423	GSMMCCYARGGKKBM	15	167	1.7e-002	CENTRIMO	 	 	http://jaspar2018.genereg.net/matrix/MA0116.1
+68	DREME	AASTGAAA	DREME-14	AASTGAAA	8	43	3.4e-002	DREME	db/JASPAR/JASPAR2018_CORE_vertebrates_non-redundant.meme	MA0050.2 (IRF1)	http://jaspar2018.genereg.net/matrix/MA0050.2
+69	db/EUKARYOTE/jolma2013.meme	NFATC1_full_3	 	TTTTCCATGGAAAA	14	114	3.6e-002	CENTRIMO	 	 	http://floresta.eead.csic.es/footprintdb/index.php?db=HumanTF:1.0&motif=NFATC1_full_3
+70	db/MOUSE/uniprobe_mouse.meme	UP00021_2	Zfp281_secondary	DKKWDACCCCCAWTNDN	17	726	4.1e-002	CENTRIMO	 	 	http://the_brain.bwh.harvard.edu/uniprobe/details2.php?id=00021

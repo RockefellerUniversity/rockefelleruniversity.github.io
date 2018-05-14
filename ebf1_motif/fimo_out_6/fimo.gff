@@ -1,0 +1,21 @@
+##gff-version 3
+chr1	fimo	nucleotide_motif	93478348	93478359	40.3	+	.	Name=HINFP1_full_1_chr1+;Alias=;ID=HINFP1_full_1-1-chr1;pvalue=9.38e-05;qvalue= 1;sequence=CCACGTCCCCAG;
+chr1	fimo	nucleotide_motif	119648988	119648999	44.1	+	.	Name=HINFP1_full_1_chr1+;Alias=;ID=HINFP1_full_1-1-chr1;pvalue=3.89e-05;qvalue= 1;sequence=CAAGGTCCGCCC;
+chr10	fimo	nucleotide_motif	21093216	21093227	40.8	+	.	Name=HINFP1_full_1_chr10+;Alias=;ID=HINFP1_full_1-1-chr10;pvalue=8.21e-05;qvalue= 1;sequence=CAACTTCCGCTT;
+chr10	fimo	nucleotide_motif	86706326	86706337	53.5	+	.	Name=HINFP1_full_1_chr10+;Alias=;ID=HINFP1_full_1-1-chr10;pvalue=4.49e-06;qvalue= 1;sequence=CCACGTCCGCTT;
+chr11	fimo	nucleotide_motif	70513746	70513757	41.4	-	.	Name=HINFP1_full_1_chr11-;Alias=;ID=HINFP1_full_1-1-chr11;pvalue=7.16e-05;qvalue= 1;sequence=CAACGTGCGCTT;
+chr11	fimo	nucleotide_motif	120492331	120492342	44.3	+	.	Name=HINFP1_full_1_chr11+;Alias=;ID=HINFP1_full_1-1-chr11;pvalue=3.71e-05;qvalue= 1;sequence=TGGCGTCCGCAG;
+chr16	fimo	nucleotide_motif	70314462	70314473	41.1	+	.	Name=HINFP1_full_1_chr16+;Alias=;ID=HINFP1_full_1-1-chr16;pvalue=7.71e-05;qvalue= 1;sequence=GCACGTCCGCCC;
+chr18	fimo	nucleotide_motif	38418952	38418963	 40	-	.	Name=HINFP1_full_1_chr18-;Alias=;ID=HINFP1_full_1-1-chr18;pvalue=9.93e-05;qvalue= 1;sequence=GCGCGTCCGCCA;
+chr2	fimo	nucleotide_motif	25224374	25224385	41.5	+	.	Name=HINFP1_full_1_chr2+;Alias=;ID=HINFP1_full_1-1-chr2;pvalue=7e-05;qvalue= 1;sequence=CACCGTCCGCCC;
+chr3	fimo	nucleotide_motif	82358114	82358125	44.2	-	.	Name=HINFP1_full_1_chr3-;Alias=;ID=HINFP1_full_1-1-chr3;pvalue=3.81e-05;qvalue= 1;sequence=CAGCGTCCCCGG;
+chr4	fimo	nucleotide_motif	44756595	44756606	49.3	-	.	Name=HINFP1_full_1_chr4-;Alias=;ID=HINFP1_full_1-1-chr4;pvalue=1.17e-05;qvalue= 1;sequence=CCGCGTCCGCGC;
+chr4	fimo	nucleotide_motif	47342872	47342883	40.3	+	.	Name=HINFP1_full_1_chr4+;Alias=;ID=HINFP1_full_1-1-chr4;pvalue=9.31e-05;qvalue= 1;sequence=CCACGTCCCCTT;
+chr5	fimo	nucleotide_motif	66524348	66524359	40.7	-	.	Name=HINFP1_full_1_chr5-;Alias=;ID=HINFP1_full_1-1-chr5;pvalue=8.45e-05;qvalue= 1;sequence=CCACGTCCCCTG;
+chr5	fimo	nucleotide_motif	93268472	93268483	42.4	-	.	Name=HINFP1_full_1_chr5-;Alias=;ID=HINFP1_full_1-1-chr5;pvalue=5.73e-05;qvalue= 1;sequence=TCACGTCCGCCA;
+chr5	fimo	nucleotide_motif	136584178	136584189	40.3	-	.	Name=HINFP1_full_1_chr5-;Alias=;ID=HINFP1_full_1-1-chr5;pvalue=9.38e-05;qvalue= 1;sequence=CCACGTCCCCAG;
+chr5	fimo	nucleotide_motif	146261315	146261326	 40	+	.	Name=HINFP1_full_1_chr5+;Alias=;ID=HINFP1_full_1-1-chr5;pvalue=9.93e-05;qvalue= 1;sequence=GCGCGTCCGCCA;
+chr7	fimo	nucleotide_motif	73595274	73595285	 43	-	.	Name=HINFP1_full_1_chr7-;Alias=;ID=HINFP1_full_1-1-chr7;pvalue=5e-05;qvalue= 1;sequence=GTACGTCCGCAT;
+chr9	fimo	nucleotide_motif	54646388	54646399	42.6	+	.	Name=HINFP1_full_1_chr9+;Alias=;ID=HINFP1_full_1-1-chr9;pvalue=5.51e-05;qvalue= 1;sequence=CAGCGTCCCCTG;
+chr9	fimo	nucleotide_motif	95857531	95857542	46.9	+	.	Name=HINFP1_full_1_chr9+;Alias=;ID=HINFP1_full_1-1-chr9;pvalue=2.02e-05;qvalue= 1;sequence=GCACGTCCGCTG;
+chr9	fimo	nucleotide_motif	103474513	103474524	42.6	-	.	Name=HINFP1_full_1_chr9-;Alias=;ID=HINFP1_full_1-1-chr9;pvalue=5.51e-05;qvalue= 1;sequence=CAGCGTCCCCTG;
