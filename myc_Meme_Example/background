@@ -1,0 +1,24 @@
+# 1-order Markov frequencies from file ./mycMel_rep1.fa
+# seqs: 13777    min: 100    max: 100    avg: 100.0    sum: 1377700    alph: DNA
+# order 0
+A 2.302e-01
+C 2.698e-01
+G 2.698e-01
+T 2.302e-01
+# order 1
+AA 5.742e-02
+AC 5.595e-02
+AG 7.489e-02
+AT 4.192e-02
+CA 7.592e-02
+CC 7.615e-02
+CG 4.289e-02
+CT 7.489e-02
+GA 6.061e-02
+GC 7.709e-02
+GG 7.615e-02
+GT 5.595e-02
+TA 3.622e-02
+TC 6.061e-02
+TG 7.592e-02
+TT 5.742e-02
