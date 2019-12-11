@@ -55,6 +55,18 @@ $(document).ready(function() {
 	);
 } );
 
+$(document).ready(function() {
+	$('#example2').DataTable({
+		"pageLength": 50,
+		"order": [[ 3, "desc" ]],
+		 columnDefs: [ 
+    	{ 'orderData':[4], 'targets': [2] },
+    	 {'targets': [4],'visible': false,'searchable': false}
+		]
+	}
+	
+	);
+} );
 
 	</script>	
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
@@ -247,9 +259,23 @@ Material linked below is <font color="black">for reference and example only.</fo
 <td>TBD</td>
 <td><font color="black">TBD</td>
 <td>1</td>
-</tr>		
+</tr>
+</tbody>
+</table>
+
+<table id="example2" class="display" cellspacing="0" width="100%">
+  <thead>
+  <tr>
+    <th>Course</th>
+    <th>Material</th>
+    <th>Dates</th>
+    <th>Availability</th>       
+  </tr>
+  </thead>
+ <tbody> 
+	     <tr>
 <td>Getting tidier with TidyR</td>
-<td><a href="http://rockefelleruniversity.github.io/tidyverse/">Link</a>
+<td><a href="http://rockefelleruniversity.github.io/RU_tidyverse/">Link</a>
 <!--a href="mailto:bioinf.training@imperial.ac.uk" target="_top">Contact us</a>--></td>
 <td>TBD</td>
 <td><font color="black">TBD</td>
