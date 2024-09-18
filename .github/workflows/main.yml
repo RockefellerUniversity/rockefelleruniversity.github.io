@@ -24,7 +24,15 @@ jobs:
         #   r-version: 'renv'
       
       # - uses: r-lib/actions/setup-renv@v2
-      
+      - name: Install ubuntu deps
+        run: sudo apt-get install -y --no-install-recommends \
+          git-core \
+          libssl-dev \
+          libcurl4-openssl-dev \
+          curl \
+          libsodium-dev \
+          libxml2-dev
+          
       - name: Render site
         run: |
           git config --global user.email "tc.infomatics@gmail.com"
