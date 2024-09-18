@@ -36,12 +36,12 @@ jobs:
       - name: Render site
         run: |
           Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml','scholar'))"
-          Rscript site/makeSite.R
+          Rscript docs/makeSite.R
       - name: Commit
         run: |
           git config --global user.name "ThomasCarroll"
           git config --global user.email "tc.infomatics@gmail.com"
           git config --global http.postBuffer 263112000
-          git add site/\*
+          git add docs/\*
           git commit -m 'Autobuild' 
           git push origin HEAD:refs/heads/master
