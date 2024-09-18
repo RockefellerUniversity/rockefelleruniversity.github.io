@@ -14,7 +14,7 @@ library(DT)
 
 The bioinformatics team provides analysis support for all biological data. The team has a large pool of experience in analysis support from initial data processing and QC through to publication.
 
-As a team, we have analysed more than 1000 high throughput sequencing datasets (including ATAC-seq, ChIP-seq, ChIP-exo, bulk and single cell RNA-seq, MNase-seq, sgRNA-seq and whole genome resequencing) and have contributed to peer-reviews publications and software from The Rockefeller University.
+As a team, we have analysed more than 10000 high throughput sequencing datasets (including ATAC-seq, ChIP-seq, ChIP-exo, bulk and single cell RNA-seq, MNase-seq, sgRNA-seq and whole genome resequencing) and have contributed to peer-reviews publications and software from The Rockefeller University.
 <br/><br/>
 
 ## **Examples of analysis projects**
