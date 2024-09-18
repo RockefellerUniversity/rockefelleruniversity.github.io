@@ -35,7 +35,7 @@ jobs:
           
       - name: Render site
         run: |
-          Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml'))"
+          Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml','scholar'))"
           Rscript site/makeSite.R
       - name: Commit
         run: |
