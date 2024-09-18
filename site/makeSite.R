@@ -1,4 +1,4 @@
-require(tidyverse)
+require(magrittr)
 require(ymlthis)
 require(yaml)
 yml_empty() %>%
