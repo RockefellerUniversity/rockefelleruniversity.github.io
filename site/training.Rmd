@@ -21,7 +21,8 @@ Daily updates to our training material can be found at http://rockefellerunivers
 ```{r,include=FALSE}
 require(jsonlite)
 require(DT)
-require(tidyverse)
+require(magrittr)
+require(dplyr)
 coursesTable <- fromJSON("course.json")
 ```
 <br/><br/>
