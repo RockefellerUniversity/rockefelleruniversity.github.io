@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global user.email "tc.infomatics@gmail.com"
           git config --global http.postBuffer 263112000
-          Rscript -e "install.packages("rmarkdown")"
+          Rscript -e "install.packages('rmarkdown')"
           Rscript site/makeSite.R
           git add \*
           git commit -m 'Autobuild' 
