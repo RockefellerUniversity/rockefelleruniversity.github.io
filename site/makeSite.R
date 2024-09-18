@@ -24,4 +24,4 @@ yml_empty() %>%
   writeLines(con = file.path("site","_site.yml"))
 
 
-rmarkdown::render_site(input = file.path("site","index.Rmd"))
+rmarkdown::render_site(input = file.path("site"))
