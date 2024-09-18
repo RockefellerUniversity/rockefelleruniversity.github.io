@@ -21,7 +21,7 @@ yml_empty() %>%
   ) %>%
   yml_output(html_document(toc = TRUE,theme="cosmo", toc_float=TRUE,highlight = "textmate")) %>% 
   as.yaml %>% 
-  writeLines(con = file.path(getwd(),"_site.yml"))
+  writeLines(con = file.path("site","_site.yml"))
 
 
-rmarkdown::render_site()
+rmarkdown::render_site(input = file.path("site","index.Rmd"))
