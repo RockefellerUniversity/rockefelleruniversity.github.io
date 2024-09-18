@@ -20,7 +20,9 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-r@v2
-
+      
+      - uses: r-lib/actions/setup-renv@v2
+      
       - name: Render site
         run: |
           git config --global user.email "tc.infomatics@gmail.com"
