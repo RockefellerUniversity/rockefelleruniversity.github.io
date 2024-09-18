@@ -20,12 +20,14 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-r@v2
-        # with:
-        #   r-version: 'renv'
+        with:
+          r-version: 'renv'
       
-      # - uses: r-lib/actions/setup-renv@v2
+
       - name: Install ubuntu deps
         run: sudo apt-get install -y make libicu-dev libxml2-dev libssl-dev pandoc librdf0-dev libnode-dev libcurl4-gnutls-dev
+        
+      - uses: r-lib/actions/setup-renv@v2
       #     git-core \
       #     libssl-dev \
       #     libcurl4-openssl-dev \
@@ -35,7 +37,7 @@ jobs:
           
       - name: Render site
         run: |
-          Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml','scholar'))"
+          # Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml','scholar'))"
           Rscript docs/makeSite.R
       - name: Commit
         run: |
