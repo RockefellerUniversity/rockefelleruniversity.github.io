@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>training.knit</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Bioinformatics Resource Center</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="software.html">Software</a>
+</li>
+<li>
+  <a href="training.html">Training</a>
+</li>
+<li>
+  <a href="analysis.html">Analysis</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/RockefellerUniversity">
+    <span class="ion ion-social-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.youtube.com/@brcru">
+    <span class="ion ion-social-youtube"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/Rockefeller_BRC">
+    <span class="ion ion-social-twitter"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div id="training" class="section level2">
+<h2><strong>Training</strong></h2>
+<p>The Bioinformatics Resource Center provides ad hoc training for
+biologists as well as training courses covering topics such as ChIP-seq,
+RNA-seq analysis, sc/snRNA-seq, sc/snATAC-seq, data visualization and
+R/Bioconductor programming.</p>
+<p>All course material is made publicly available and the core will be
+running training for basic bioinformatics analysis, reproducible
+research in R and python as well as visualizing data in genome browsers.
+For details on upcoming courses see our upcoming training or contact us
+at <a href="brc@rockefeller.edu">brc@rockefeller.edu</a>.</p>
+<p>As well as training in Bioinformatics methods, the Bioinformatics
+team can offer advice on the use of local compute resources (i.e. best
+practice in using R in cluster compute environment).</p>
+<p>Daily updates to our training material can be found at <a
+href="http://rockefelleruniversity.github.io/training"
+class="uri">http://rockefelleruniversity.github.io/training</a>.</p>
+<p><br/><br/></p>
+</div>
+<div id="courses" class="section level2">
+<h2><strong>Courses</strong></h2>
+<p>Upcoming, graduate school and the full course list is available
+below.</p>
+<p>All material for courses is hosted publicaly and links to issues
+pages for support our listed within the relevant training pages.
+<br/><br/></p>
+<div id="upcoming" class="section level3">
+<h3>Upcoming</h3>
+<p>The Bioinformatics Resource Center will be running the below courses
+in the near future.</p>
+<p>To sign up to attend the course in person please click on the sign
+ups links in the table below.</p>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-398612ae64fb91421ab4" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-398612ae64fb91421ab4">{"x":{"filter":"none","vertical":false,"data":[["1","2"],["Intro To R","Introduction to Python"],["2024-07-09","2024-06-24"],["<a href=\"https://registration.rockefeller.edu/Intro_To_R_1\">Register<\/a>","<a href=\"https://registration.rockefeller.edu/Intro_To_Python\">Register<\/a>"],["<a href=\"http://rockefelleruniversity.github.io/Intro_To_R_1Day/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/Intro_To_Python/\">Link<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Courses<\/th>\n      <th>Start_Date<\/th>\n      <th>SignUp<\/th>\n      <th>Material<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Courses","targets":1},{"name":"Start_Date","targets":2},{"name":"SignUp","targets":3},{"name":"Material","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="graduate-school" class="section level3">
+<h3>Graduate School</h3>
+<p>The Bioinformatics Resource Center runs bioinformatics training as
+part of the graduate school. We recommend this collection of courses as
+a comprehensive syllabus for self-learning.</p>
+<p>Links and dates for material and classes are listed in the table
+below.</p>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-fdb0604aecb836573262" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-fdb0604aecb836573262">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11"],["Intro To R","Plotting In R","Reproducible R","Genomic Data","IGV","Introduction to Bioconductor","ChIPseq in Bioconductor","ATACseq in Bioconductor","RNAseq in Bioconductor","Crispr screening in R and Bioconductor","scRNAseq Basics"],["2024-05-10","2024-05-20","2024-05-15","2024-05-31","2024-05-31","2024-06-03","2024-06-21","2024-06-24","2024-06-14","2024-06-28","2024-07-01"],["<a href=\"http://rockefelleruniversity.github.io/Intro_To_R_1Day/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/Plotting_In_R/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/RU_reproducibleR/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/Genomic_Data//\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/IGV_course/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/Bioconductor_Introduction/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_ChIPseq/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_ATACseq/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_RNAseq/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/RU_CrisprScreen/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/scRNA-seq/\">Link<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Courses<\/th>\n      <th>Start_Date<\/th>\n      <th>Material<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Courses","targets":1},{"name":"Start_Date","targets":2},{"name":"Material","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="full-course-list" class="section level3">
+<h3>Full course list</h3>
+<p>The below table lists all courses currently hosted by the
+Bioinformatic Resource Center.</p>
+<p>If you would like us to host a local training session on any of this
+material please reach out to us at <a
+href="brc@rockefeller.edu">brc@rockefeller.edu</a>.</p>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-c6f01ec3ebdf3498d521" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c6f01ec3ebdf3498d521">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21"],["Intro To R","Intro To R (Abridged)","Plotting In R","Tidyverse abridged","Reproducible R","Genomic Data","IGV","Introduction to Bioconductor","ChIPseq in Bioconductor","ATACseq in Bioconductor","Genomic Variants in Bioconductor","RNAseq in Bioconductor","Visualising genomics data in R and Bioconductor","Crispr screening in R and Bioconductor","Genome Assembly","Cell Ranger","scRNAseq Basics","scRNAseq Bootcamp","Getting tidier with TidyR","Genomic Heatmaps with profileplyr and Deeptools","Introduction to Python"],["<a href=\"http://rockefelleruniversity.github.io/Intro_To_R_1Day/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_introtoR_abridged/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/Plotting_In_R/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_tidyverse_core/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/RU_reproducibleR/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/Genomic_Data//\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/IGV_course/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/Bioconductor_Introduction/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_ChIPseq/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_ATACseq/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/RU_GenomicVariants/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_RNAseq/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_VisualizingGenomicsData/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/RU_CrisprScreen/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/GenomeAssembly/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/CellRanger/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/scRNA-seq/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/SingleCell_Bootcamp/\">Link<\/a>","<a href=\"http://rockefelleruniversity.github.io/RU_tidyverse/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/Genomic_HeatmapsAndProfiles/\">Link<\/a>","<a href=\"https://rockefelleruniversity.github.io/Intro_To_Python/\">Link<\/a>"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Courses<\/th>\n      <th>Material<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Courses","targets":1},{"name":"Material","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
