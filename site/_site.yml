@@ -1,0 +1,26 @@
+output_dir: '.'
+navbar:
+  title: Bioinformatics Resource Center
+  left:
+  - text: Home
+    href: index.html
+  - text: Software
+    href: software.html
+  - text: Training
+    href: training.html
+  - text: Analysis
+    href: analysis.html
+  right:
+  - href: https://github.com/RockefellerUniversity
+    icon: ion-social-github
+  - href: https://www.youtube.com/@brcru
+    icon: ion-social-youtube
+  - href: https://twitter.com/Rockefeller_BRC
+    icon: ion-social-twitter
+output:
+  html_document:
+    toc: yes
+    theme: cosmo
+    toc_float: yes
+    highlight: textmate
+

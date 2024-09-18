@@ -1,0 +1,23 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## **Overview**
+
+The Rockefeller University Bioinformatics Resource Center homepage contains information on our team, our training resources, our currently released software and on our bioinformatics consultancy services.
+
+To see our latest and in development training and software visit us on github and github.io
+
+<br/><br/>
+
+## **The Team**
+
+- Matt Paul - Bioinformatics Analyst [mpaul@rockefeller.edu](mpaul@rockefeller.edu)
+- Wei Wang - Bioinformatics Engineer [wwang05@rockefeller.edu](wwang05@rockefeller.edu)
+- Doug Barrows - Bioinformatics Analyst  [dbarrows@rockefeller.edu](dbarrows@rockefeller.edu)
+- Jenelys Ruiz-Ortiz - Bioinformatics Analyst [jruiz01@rockefeller.edu](jruiz01@rockefeller.edu)
+- Thomas Carroll - Director of Bioinformatics [tcarroll@rockefeller.edu](tcarroll@rockefeller.edu)

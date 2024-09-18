@@ -1,0 +1,45 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(scholar)
+library(tidyverse)
+library(DT)
+```
+
+## **Analysis Support and Consulting**
+
+The bioinformatics team provides analysis support for all biological data. The team has a large pool of experience in analysis support from initial data processing and QC through to publication.
+
+As a team, we have analysed more than 1000 high throughput sequencing datasets (including ATAC-seq, ChIP-seq, ChIP-exo, bulk and single cell RNA-seq, MNase-seq, sgRNA-seq and whole genome resequencing) and have contributed to peer-reviews publications and software from The Rockefeller University.
+<br/><br/>
+
+## **Examples of analysis projects**
+
+- Single cell RNA-seq analysis of changes in gene expression and identification of cell specific pathways.Mapping of transcription factor targets from ChIP-seq and correlation of targets with expression from associated Knock Out experiments.
+- Evaluation of genes important to survival after treatment using sgRNA-seq.
+- Identification of transcript selection, differential exon usage and splicing motifs in RNA-seq data.
+- Analysis and visualization of evolutionary conserved motifs around functional elements.
+
+If you have a question about present or future analysis or require analysis support please contact Thomas Carroll (brc@rockefeller.edu).
+<br/><br/>
+
+## **Full list of authorships for BRC members**
+
+```{r,echo=FALSE}
+
+tomP <- get_publications("W_54zuEAAAAJ&hl")
+mattP <- get_publications("M4z_6poAAAAJ")
+dougP <- get_publications("H5XCHi0AAAAJ")
+jidungP <-  get_publications("4wmnEI4AAAAJ")
+weP <- get_publications("nnaXNlgAAAAJ")
+allPubs <- list(tomP,mattP,dougP,jidungP,weP) %>% 
+  do.call(rbind,.) %>% 
+  distinct %>% 
+  select(title,author,journal,year) %>% 
+  arrange(desc(year))
+
+datatable(allPubs,rownames = FALSE)
+```

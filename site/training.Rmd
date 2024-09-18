@@ -1,0 +1,79 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## **Training** 
+
+The Bioinformatics Resource Center provides ad hoc training for biologists as well as training courses covering topics such as ChIP-seq, RNA-seq analysis, sc/snRNA-seq, sc/snATAC-seq, data visualization and R/Bioconductor programming.
+
+All course material is made publicly available and  the core will be running training for basic bioinformatics analysis, reproducible research in R and python as well as visualizing data in genome browsers. For details on upcoming courses see our upcoming training or contact us at [brc@rockefeller.edu](brc@rockefeller.edu).
+
+As well as training in Bioinformatics methods, the Bioinformatics team can offer advice on the use of local compute resources (i.e. best practice in using R in cluster compute environment).
+
+Daily updates to our training material can be found at http://rockefelleruniversity.github.io/training.
+
+
+```{r,include=FALSE}
+require(jsonlite)
+require(DT)
+require(tidyverse)
+coursesTable <- fromJSON("course.json")
+```
+<br/><br/>
+
+## **Courses**
+
+Upcoming, graduate school and the full course list is available below.
+
+All material for courses is hosted publicaly and links to issues pages for support our listed within the relevant training pages.
+<br/><br/>
+
+### Upcoming
+
+The Bioinformatics Resource Center will be running the below courses in the near future.
+
+To sign up to attend the course in person please click on the sign ups links in the table below.
+
+```{r,echo=FALSE}
+
+coursesTable %>% 
+  filter(Public_Dates != "") %>% 
+  select(Courses,Start_Date=Public_Dates,SignUp=SignUp,Material=Links) %>%
+  mutate(Material=paste0("<a href=\"",Material,"\">Link</a>"),
+         SignUp=paste0("<a href=\"",SignUp,"\">Register</a>")) %>% 
+  datatable(escape = FALSE)
+```
+
+### Graduate School
+
+The Bioinformatics Resource Center runs bioinformatics training as part of the graduate school. We recommend this collection of courses as a comprehensive syllabus for self-learning. 
+
+Links and dates for material and classes are listed in the table below.
+
+```{r,echo=FALSE}
+
+coursesTable %>% 
+  filter(Graduate_School_Dates != "") %>% 
+  select(Courses,Start_Date=Graduate_School_Dates,Material=Links) %>%
+  mutate(Material=paste0("<a href=\"",Material,"\">Link</a>")) %>% 
+  datatable(escape = FALSE)
+```
+
+
+### Full course list
+
+The below table lists all courses currently hosted by the Bioinformatic Resource Center. 
+
+If you would like us to host a local training session on any of this material please reach out to us at [brc@rockefeller.edu](brc@rockefeller.edu).
+
+```{r,echo=FALSE}
+coursesTable %>% 
+  select(Courses,Material=Links) %>%
+  mutate(Material=paste0("<a href=\"",Material,"\">Link</a>")) %>% 
+  datatable(escape = FALSE)
+```
