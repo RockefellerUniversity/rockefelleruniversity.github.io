@@ -35,10 +35,11 @@ jobs:
           
       - name: Render site
         run: |
+          git config --global user.name "ThomasCarroll"
           git config --global user.email "tc.infomatics@gmail.com"
           git config --global http.postBuffer 263112000
           Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml'))"
           Rscript site/makeSite.R
-          git add \*
+          git add site/\*
           git commit -m 'Autobuild' 
           git push origin HEAD:refs/heads/master
