@@ -17,6 +17,26 @@ As well as training in Bioinformatics methods, the Bioinformatics team can offer
 
 Daily updates to our training material can be found at http://rockefelleruniversity.github.io/training.
 
+```{r,include=FALSE, warning=F, message=F}
+library(rio)
+signup <- rio::import("Training_Courses_BRC_MP.xls")
+
+instructorTable <- fromJSON("instructors.json")
+
+temp <- strsplit(signup$Instructors, " and |, ")
+
+signup$Instructors <- sapply(temp, function(x){
+  a <- merge(instructorTable, data.frame(Name=x), sort = F)
+  to_cat <- paste0("<a href=\"",a[,2],"\">",a[,1],"</a>")
+  for_out <- paste0(to_cat, collapse=", ")
+  return(for_out)
+
+})
+
+signup$Links[is.na(signup$Links)] <- "placeholder.html"
+
+```
+
 
 ```{r,include=FALSE}
 require(jsonlite)
@@ -31,7 +51,7 @@ coursesTable <- fromJSON("course.json")
 
 Upcoming, graduate school and the full course list is available below.
 
-All material for courses is hosted publicaly and links to issues pages for support our listed within the relevant training pages.
+All material for courses is hosted publicly and links to issues pages for support our listed within the relevant training pages.
 <br/><br/>
 
 ### Upcoming
@@ -42,12 +62,24 @@ To sign up to attend the course in person please click on the sign ups links in 
 
 ```{r,echo=FALSE}
 
-coursesTable %>% 
-  filter(Public_Dates != "") %>% 
-  select(Courses,Start_Date=Public_Dates,SignUp=SignUp,Material=Links) %>%
+signup %>%
+  select(Course,
+         Dates=`Final Dates`,
+         Time,
+         SignUp=SignUp, 
+         Material=Links,
+         Instructors=Instructors) %>% 
   mutate(Material=paste0("<a href=\"",Material,"\">Link</a>"),
-         SignUp=paste0("<a href=\"",SignUp,"\">Register</a>")) %>% 
+         SignUp=paste0("<a href=\"",SignUp,"\">Register</a>")) %>%
   datatable(escape = FALSE)
+  
+
+# coursesTable %>%
+#   filter(Public_Dates != "") %>%
+#   select(Courses,Start_Date=Public_Dates, SignUp=SignUp, Material=Links) %>%
+#   mutate(Material=paste0("<a href=\"",Material,"\">Link</a>"),
+#          SignUp=paste0("<a href=\"",SignUp,"\">Register</a>")) %>%
+#   datatable(escape = FALSE)
 ```
 
 ### Graduate School
