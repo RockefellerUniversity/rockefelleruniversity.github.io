@@ -20,7 +20,7 @@ Daily updates to our training material can be found at http://rockefellerunivers
 ```{r,include=FALSE, warning=F, message=F}
 library(rio)
 require(jsonlite)
-signup <- rio::import("Training_Courses_BRC_MP.xls")
+signup <- read.csv("Training_Courses_BRC_MP.csv")
 
 instructorTable <- fromJSON("instructors.json")
 
@@ -65,7 +65,7 @@ To sign up to attend the course in person please click on the sign ups links in 
 
 signup %>%
   select(Course,
-         Dates=`Final Dates`,
+         Dates=`Final.Dates`,
          Time,
          SignUp=SignUp, 
          Material=Links,
