@@ -19,6 +19,7 @@ Daily updates to our training material can be found at http://rockefellerunivers
 
 ```{r,include=FALSE, warning=F, message=F}
 library(rio)
+require(jsonlite)
 signup <- rio::import("Training_Courses_BRC_MP.xls")
 
 instructorTable <- fromJSON("instructors.json")
@@ -39,7 +40,7 @@ signup$Links[is.na(signup$Links)] <- "placeholder.html"
 
 
 ```{r,include=FALSE}
-require(jsonlite)
+
 require(DT)
 require(magrittr)
 require(dplyr)
