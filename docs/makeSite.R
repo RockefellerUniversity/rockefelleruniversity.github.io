@@ -6,7 +6,7 @@ library("redmineR")
 toDownload <- redmine_list_issues(issue_id = 2855,include="attachments")
 trainingsheet <- toDownload$content$issues[[1]]$attachments[[1]]$content_url
 httr::GET(url = trainingsheet, httr::add_headers(`X-Redmine-API-Key` = redmineR:::redmine_token()), 
-          httr::write_disk(file.path(basename(trainingsheet)),overwrite = TRUE))
+          httr::write_disk(file.path("docs",basename(trainingsheet)),overwrite = TRUE))
 
 
 yml_empty() %>%
