@@ -7,14 +7,14 @@
 ,{"Courses":"IGV","Links":"http://rockefelleruniversity.github.io/IGV_course/","Graduate_School_Dates":"2025-04-11","Public_Dates":"","SignUp":""}
 ,{"Courses":"Introduction to Bioconductor","Links":"http://rockefelleruniversity.github.io/Bioconductor_Introduction/","Graduate_School_Dates":"2025-04-14","Public_Dates":"","SignUp":""}
 ,{"Courses":"ChIPseq/Cut and Run in Bioconductor","Links":"http://rockefelleruniversity.github.io/RU_ChIPseq/","Graduate_School_Dates":"2024-04-25","Public_Dates":"","SignUp":""}
-,{"Courses":"ATACseq in Bioconductor","Links":"http://rockefelleruniversity.github.io/RU_ATACseq/","Graduate_School_Dates":"2024-05-02","Public_Dates":"","SignUp":""}
+,{"Courses":"ATACseq in Bioconductor","Links":"http://rockefelleruniversity.github.io/RU_ATACseq/","Graduate_School_Dates":"2025-05-02","Public_Dates":"","SignUp":""}
 ,{"Courses":"Genomic Variants in Bioconductor","Links":"https://rockefelleruniversity.github.io/RU_GenomicVariants/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
-,{"Courses":"RNAseq in Bioconductor","Links":"http://rockefelleruniversity.github.io/RU_RNAseq/","Graduate_School_Dates":"2024-05-09","Public_Dates":"","SignUp":""}
+,{"Courses":"RNAseq in Bioconductor","Links":"http://rockefelleruniversity.github.io/RU_RNAseq/","Graduate_School_Dates":"2025-05-09","Public_Dates":"","SignUp":""}
 ,{"Courses":"Visualising genomics data in R and Bioconductor","Links":"http://rockefelleruniversity.github.io/RU_VisualizingGenomicsData/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
-,{"Courses":"Crispr screening in R and Bioconductor","Links":"https://rockefelleruniversity.github.io/RU_CrisprScreen/","Graduate_School_Dates":"2024-05-16","Public_Dates":"","SignUp":""}
+,{"Courses":"Crispr screening in R and Bioconductor","Links":"https://rockefelleruniversity.github.io/RU_CrisprScreen/","Graduate_School_Dates":"2025-05-16","Public_Dates":"","SignUp":""}
 ,{"Courses":"Genome Assembly","Links":"https://rockefelleruniversity.github.io/GenomeAssembly/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
 ,{"Courses":"Cell Ranger","Links":"http://rockefelleruniversity.github.io/CellRanger/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
-,{"Courses":"scRNAseq Basics","Links":"http://rockefelleruniversity.github.io/scRNA-seq/","Graduate_School_Dates":"2024-05-23","Public_Dates":"","SignUp":""}
+,{"Courses":"scRNAseq Basics","Links":"http://rockefelleruniversity.github.io/scRNA-seq/","Graduate_School_Dates":"2025-05-23","Public_Dates":"","SignUp":""}
 ,{"Courses":"scRNAseq Bootcamp","Links":"https://rockefelleruniversity.github.io/SingleCell_Bootcamp/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
 ,{"Courses":"Getting tidier with TidyR","Links":"http://rockefelleruniversity.github.io/RU_tidyverse/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
 ,{"Courses":"Genomic Heatmaps with profileplyr and Deeptools","Links":"https://rockefelleruniversity.github.io/Genomic_HeatmapsAndProfiles/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
