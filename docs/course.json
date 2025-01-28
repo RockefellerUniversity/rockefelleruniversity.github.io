@@ -18,5 +18,4 @@
 ,{"Courses":"scRNAseq Bootcamp","Links":"https://rockefelleruniversity.github.io/SingleCell_Bootcamp/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
 ,{"Courses":"Getting tidier with TidyR","Links":"http://rockefelleruniversity.github.io/RU_tidyverse/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
 ,{"Courses":"Genomic Heatmaps with profileplyr and Deeptools","Links":"https://rockefelleruniversity.github.io/Genomic_HeatmapsAndProfiles/","Graduate_School_Dates":"","Public_Dates":"","SignUp":""}
-,{"Courses":"Introduction to Python","Links":"https://rockefelleruniversity.github.io/Intro_To_Python/","Graduate_School_Dates":"","Public_Dates":"2024-06-24","SignUp":"https://registration.rockefeller.edu/Intro_To_Python"}
-]
+,{"Courses":"Introduction to Python","Links":"https://rockefelleruniversity.github.io/Intro_To_Python/","Graduate_School_Dates":"","Public_Dates":"2024-06-24","SignUp":"https://registration.rockefeller.edu/Intro_To_Python"}, {"Courses":"Loupe Browser","Links":"https://rockefelleruniversity.github.io/LoupeBrowser/","Graduate_School_Dates":"","Public_Dates":"2025-01-28","SignUp":"https://registration.rockefeller.edu/Visualizing_scRNAseq_data_with_Loupe_browser_2025"}]
