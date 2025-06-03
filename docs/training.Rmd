@@ -39,11 +39,6 @@ signup$Links[is.na(signup$Links)] <- "placeholder.html"
 ```
 
 
-
-
-
-
-
 ```{r,include=FALSE}
 
 require(DT)
