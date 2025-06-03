@@ -87,7 +87,9 @@ signup %>%
 
 The Bioinformatics Resource Center runs bioinformatics training as part of the graduate school. We recommend this collection of courses as a comprehensive syllabus for self-learning. 
 
-Links and dates for material and classes are listed in the table below.
+**Graduate School Bioinformatics course will start March 25th 2025**
+
+Links and dates for material and classes arelisted in the table below.
 
 ```{r,echo=FALSE}
 
