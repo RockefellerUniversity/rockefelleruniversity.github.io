@@ -17,11 +17,20 @@ As well as training in Bioinformatics methods, the Bioinformatics team can offer
 
 Daily updates to our training material can be found at http://rockefelleruniversity.github.io/training.
 
-```{r,include=FALSE, warning=F, message=F}
-
+```{r, deps,include=FALSE, warning=F, message=F}
 require(jsonlite)
-signup <- read.csv("Training_Courses_BRC_MP.csv")
+require(DT)
+require(magrittr)
+require(dplyr)
+library(lubridate)
+library(stringr)
 
+```
+
+```{r loadcourses,include=FALSE, warning=F, message=F}
+# this pulls from csv here: http://35.174.176.135/issues/2855
+signup <- read.csv("~/Desktop/Training_Courses_BRC_MP.csv")
+coursesTable <- fromJSON("course.json")
 instructorTable <- fromJSON("instructors.json")
 
 temp <- strsplit(signup$Instructors, " and |, ")
@@ -35,19 +44,10 @@ signup$Instructors <- sapply(temp, function(x){
 })
 
 signup$Links[is.na(signup$Links)] <- "placeholder.html"
-
 signup <- signup[!nchar(signup$Course)==0,]
 
 ```
 
-
-```{r,include=FALSE}
-
-require(DT)
-require(magrittr)
-require(dplyr)
-coursesTable <- fromJSON("course.json")
-```
 <br/><br/>
 
 ## **Courses**
@@ -59,9 +59,9 @@ All material for courses is hosted publicly and links to issues pages for suppor
 
 ### Computational Biology Fortnight
 
-To kick-off 2026 we will be hosting the first Rockefeller University Computational Biology Fortnight. Over these two weeks the BRC will host a series of workshops and talks with the help of the Vertebrate Genome Laboratory and The Rita & Frits Markus Library. See our poster advert [here]("summary.pdf"). Register for events below:
+To kick-off 2026 we will be hosting the first Rockefeller University Computational Biology Fortnight. Over these two weeks the BRC will host a series of workshops and talks with the help of the Vertebrate Genome Laboratory and The Rita & Frits Markus Library. See our poster advert [here](summary.pdf). Register for events below:
 
-```{r,echo=FALSE}
+```{r compbioweek, echo=FALSE}
 
 course <- c("Intro to C and C++","Intro To Python","Intro To R")
 dates <- c("January 26/28/30 2026",
@@ -97,9 +97,7 @@ The Bioinformatics Resource Center will be running the below courses in the near
 To sign up to attend the course in person please click on the sign ups links in the table below.
 
 
-```{r,echo=FALSE}
-library(lubridate)
-library(stringr)
+```{r courseplan,echo=FALSE}
 
 courses_planned <- TRUE
 
@@ -128,7 +126,7 @@ if(any(signup$Final.Dates == "TBD")){
 
 
 if(courses_planned){
-# this pulls from csv here: http://35.174.176.135/issues/2855
+
 out_df %>%
   select(Course,
          Dates=`Final.Dates`,
