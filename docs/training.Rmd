@@ -6,16 +6,15 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-## **Training** 
+## **Training**
 
 The Bioinformatics Resource Center provides ad hoc training for biologists as well as training courses covering topics such as ChIP-seq, RNA-seq analysis, sc/snRNA-seq, sc/snATAC-seq, data visualization and R/Bioconductor programming.
 
-All course material is made publicly available and  the core will be running training for basic bioinformatics analysis, reproducible research in R and python as well as visualizing data in genome browsers. For details on upcoming courses see our upcoming training or contact us at [brc@rockefeller.edu](brc@rockefeller.edu).
+All course material is made publicly available and the core will be running training for basic bioinformatics analysis, reproducible research in R and python as well as visualizing data in genome browsers. For details on upcoming courses see our upcoming training or contact us at [brc\@rockefeller.edu](brc@rockefeller.edu).
 
 As well as training in Bioinformatics methods, the Bioinformatics team can offer advice on the use of local compute resources (i.e. best practice in using R in cluster compute environment).
 
-Daily updates to our training material can be found at http://rockefelleruniversity.github.io/training.
+Daily updates to our training material can be found at <http://rockefelleruniversity.github.io/training>.
 
 ```{r, deps,include=FALSE, warning=F, message=F}
 require(jsonlite)
@@ -29,7 +28,7 @@ library(stringr)
 
 ```{r loadcourses,include=FALSE, warning=F, message=F}
 # this pulls from csv here: http://35.174.176.135/issues/2855
-signup <- read.csv("~/Desktop/Training_Courses_BRC_MP.csv")
+signup <- read.csv("Training_Courses_BRC_MP.csv")
 coursesTable <- fromJSON("course.json")
 instructorTable <- fromJSON("instructors.json")
 
@@ -54,8 +53,7 @@ signup <- signup[!nchar(signup$Course)==0,]
 
 Upcoming, graduate school and the full course list is available below.
 
-All material for courses is hosted publicly and links to issues pages for support our listed within the relevant training pages.
-<br/><br/>
+All material for courses is hosted publicly and links to issues pages for support our listed within the relevant training pages. <br/><br/>
 
 ### Computational Biology Fortnight
 
@@ -95,7 +93,6 @@ data.frame("Course" = course,
 The Bioinformatics Resource Center will be running the below courses in the near future.
 
 To sign up to attend the course in person please click on the sign ups links in the table below.
-
 
 ```{r courseplan,echo=FALSE}
 
@@ -152,7 +149,7 @@ out_df %>%
 
 ### Graduate School
 
-The Bioinformatics Resource Center runs bioinformatics training as part of the graduate school. We recommend this collection of courses as a comprehensive syllabus for self-learning. 
+The Bioinformatics Resource Center runs bioinformatics training as part of the graduate school. We recommend this collection of courses as a comprehensive syllabus for self-learning.
 
 **Graduate School Bioinformatics course typically happens in the Spring/Summer Semester. Check with the Graduate School for the current schedule.**
 
@@ -167,12 +164,11 @@ coursesTable %>%
   datatable(escape = FALSE)
 ```
 
-
 ### Full course list
 
-The below table lists all courses currently hosted by the Bioinformatic Resource Center. 
+The below table lists all courses currently hosted by the Bioinformatic Resource Center.
 
-If you would like us to host a local training session on any of this material please reach out to us at [brc@rockefeller.edu](brc@rockefeller.edu).
+If you would like us to host a local training session on any of this material please reach out to us at [brc\@rockefeller.edu](brc@rockefeller.edu).
 
 ```{r,echo=FALSE}
 coursesTable %>% 
