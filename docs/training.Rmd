@@ -36,12 +36,9 @@ signup$Instructors <- sapply(temp, function(x){
 
 signup$Links[is.na(signup$Links)] <- "placeholder.html"
 
+signup <- signup[!nchar(signup$Course)==0,]
+
 ```
-
-
-
-
-
 
 
 ```{r,include=FALSE}
@@ -60,15 +57,79 @@ Upcoming, graduate school and the full course list is available below.
 All material for courses is hosted publicly and links to issues pages for support our listed within the relevant training pages.
 <br/><br/>
 
+### Computational Biology Fortnight
+
+To kick-off 2026 we will be hosting the first Rockefeller University Computational Biology Fortnight. Over these two weeks the BRC will host a series of workshops and talks with the help of the Vertebrate Genome Laboratory and The Rita & Frits Markus Library. See our poster advert [here]("summary.pdf"). Register for events below:
+
+```{r,echo=FALSE}
+
+course <- c("Intro to C and C++","Intro To Python","Intro To R")
+dates <- c("January 26/28/30 2026",
+           "January 27/29 2026",
+           "Feburary 04/05 2026")
+time <- "9.30-4.30"
+signups <-c("https://registration.rockefeller.edu/Introduction_to_Cpp_2026",
+           "https://registration.rockefeller.edu/Introduction_To_Python_2026",
+           "https://registration.rockefeller.edu/Introduction_To_R_2026")
+materials <- c("placeholder.html",
+               "https://rockefelleruniversity.github.io/Intro_To_Python/",
+               "https://rockefelleruniversity.github.io/Intro_To_R_1Day/")
+
+data.frame("Course" = course,
+           "Dates" = dates,
+           "Time" = time,
+           "SignUp" = paste0("<a href=\"",signups,"\">Link</a>"),
+           "Material" = paste0("<a href=\"",materials,"\">Link</a>")) %>%
+  datatable(escape = FALSE)
+
+# coursesTable %>%
+#   filter(Public_Dates != "") %>%
+#   select(Courses,Start_Date=Public_Dates, SignUp=SignUp, Material=Links) %>%
+#   mutate(Material=paste0("<a href=\"",Material,"\">Link</a>"),
+#          SignUp=paste0("<a href=\"",SignUp,"\">Register</a>")) %>%
+#   datatable(escape = FALSE)
+```
+
 ### Upcoming
 
 The Bioinformatics Resource Center will be running the below courses in the near future.
 
 To sign up to attend the course in person please click on the sign ups links in the table below.
 
-```{r,echo=FALSE}
 
-signup %>%
+```{r,echo=FALSE}
+library(lubridate)
+library(stringr)
+
+courses_planned <- TRUE
+
+if(any(signup$Final.Dates == "TBD")){
+  signup_temp <- signup[!signup$Final.Dates == "TBD",]
+  potent_dates <- signup_temp$Final.Dates %>% str_split(.," |/") %>% sapply(function(x) paste0(x[c(1:2, length(x))], collapse=" "))
+  potent_dates <- mdy(potent_dates)
+  idx <- potent_dates > today()
+  if(sum(idx)==0){
+    out_df <- signup[signup$Final.Dates == "TBD",]
+  } else {
+    out_df <- rbind(signup_temp[idx,],
+                    signup[signup$Final.Dates == "TBD",])
+  }}else{
+    potent_dates <- signup$Final.Dates %>% str_split(.," |/") %>% sapply(function(x) paste0(x[c(1:2, length(x))], collapse=" "))
+    potent_dates <- mdy(potent_dates)
+    idx <- potent_dates > today()
+    if(sum(idx)==0){
+      out_df<- data.frame("Course" =" We are planning new training sessions at the moment, but we have nothing scheduled. Check back soon and keep your eye out for emails.")
+      courses_planned <- FALSE
+      
+    } else {
+      out_df <- signup_temp[idx,]
+  }}
+
+
+
+if(courses_planned){
+# this pulls from csv here: http://35.174.176.135/issues/2855
+out_df %>%
   select(Course,
          Dates=`Final.Dates`,
          Time,
@@ -78,7 +139,10 @@ signup %>%
   mutate(Material=paste0("<a href=\"",Material,"\">Link</a>"),
          SignUp=paste0("<a href=\"",SignUp,"\">Register</a>")) %>%
   datatable(escape = FALSE)
-  
+} else{
+  out_df %>%
+  datatable(escape = FALSE)
+}
 
 # coursesTable %>%
 #   filter(Public_Dates != "") %>%
@@ -92,9 +156,9 @@ signup %>%
 
 The Bioinformatics Resource Center runs bioinformatics training as part of the graduate school. We recommend this collection of courses as a comprehensive syllabus for self-learning. 
 
-**Graduate School Bioinformatics course will start March 25th 2025**
+**Graduate School Bioinformatics course typically happens in the Spring/Summer Semester. Check with the Graduate School for the current schedule.**
 
-Links and dates for material and classes arelisted in the table below.
+Links and dates for material and classes are listed in the table below.
 
 ```{r,echo=FALSE}
 
