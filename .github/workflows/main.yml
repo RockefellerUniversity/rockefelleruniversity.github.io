@@ -39,7 +39,7 @@ jobs:
           
       - name: Render site
         run: |
-          Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml','scholar','lubridate','stringr'))"
+          #Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml','scholar','lubridate','stringr'))"
           Rscript -e "install.packages(c('remotes'))"
           Rscript -e "remotes::install_github('openanalytics/redmineR')"
           Rscript docs/makeSite.R
