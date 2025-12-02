@@ -28,7 +28,7 @@ library(stringr)
 
 ```{r loadcourses,include=FALSE, warning=F, message=F}
 # this pulls from csv here: http://35.174.176.135/issues/2855
-signup <- read.csv("Training_Courses_BRC_MP.csv")
+signup <- read.csv("~/Desktop/Training_Courses_BRC_MP.csv")
 coursesTable <- fromJSON("course.json")
 instructorTable <- fromJSON("instructors.json")
 
@@ -122,8 +122,14 @@ courses_planned <- TRUE
 #   }}
 
 # remove this eventually
-out_df <- data.frame("Course" =" We are planning new training sessions at the moment, but we have nothing scheduled. Check back soon and keep your eye out for emails.")
-courses_planned <- FALSE
+
+courses_planned <- TRUE
+
+if(courses_planned){
+  out_df <- signup
+  }else{
+  out_df <- data.frame("Course" =" We are planning new training sessions at the moment, but we have nothing scheduled. Check back soon and keep your eye out for emails.")
+}
 
 if(courses_planned){
 
