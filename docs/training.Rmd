@@ -28,7 +28,7 @@ library(stringr)
 
 ```{r loadcourses,include=FALSE, warning=F, message=F}
 # this pulls from csv here: http://35.174.176.135/issues/2855
-signup <- read.csv("Training_Courses_BRC_MP.csv")
+signup <- read.csv("~/Desktop/Training_Courses_BRC_MP.csv")
 coursesTable <- fromJSON("course.json")
 instructorTable <- fromJSON("instructors.json")
 
@@ -98,29 +98,38 @@ To sign up to attend the course in person please click on the sign ups links in 
 
 courses_planned <- TRUE
 
-if(any(signup$Final.Dates == "TBD")){
-  signup_temp <- signup[!signup$Final.Dates == "TBD",]
-  potent_dates <- signup_temp$Final.Dates %>% str_split(.," |/") %>% sapply(function(x) paste0(x[c(1:2, length(x))], collapse=" "))
-  potent_dates <- mdy(potent_dates)
-  idx <- potent_dates > today()
-  if(sum(idx)==0){
-    out_df <- signup[signup$Final.Dates == "TBD",]
-  } else {
-    out_df <- rbind(signup_temp[idx,],
-                    signup[signup$Final.Dates == "TBD",])
-  }}else{
-    potent_dates <- signup$Final.Dates %>% str_split(.," |/") %>% sapply(function(x) paste0(x[c(1:2, length(x))], collapse=" "))
-    potent_dates <- mdy(potent_dates)
-    idx <- potent_dates > today()
-    if(sum(idx)==0){
-      out_df<- data.frame("Course" =" We are planning new training sessions at the moment, but we have nothing scheduled. Check back soon and keep your eye out for emails.")
-      courses_planned <- FALSE
-      
-    } else {
-      out_df <- signup_temp[idx,]
-  }}
+# need to get this uncommented
+# if(any(signup$Final.Dates == "TBD")){
+#   signup_temp <- signup[!signup$Final.Dates == "TBD",]
+#   potent_dates <- signup_temp$Final.Dates %>% str_split(.," |/") %>% sapply(function(x) paste0(x[c(1:2, length(x))], collapse=" "))
+#   potent_dates <- mdy(potent_dates)
+#   idx <- potent_dates > today()
+#   if(sum(idx)==0){
+#     out_df <- signup[signup$Final.Dates == "TBD",]
+#   } else {
+#     out_df <- rbind(signup_temp[idx,],
+#                     signup[signup$Final.Dates == "TBD",])
+#   }}else{
+#     potent_dates <- signup$Final.Dates %>% str_split(.," |/") %>% sapply(function(x) paste0(x[c(1:2, length(x))], collapse=" "))
+#     potent_dates <- mdy(potent_dates)
+#     idx <- potent_dates > today()
+#     if(sum(idx)==0){
+#       out_df<- data.frame("Course" =" We are planning new training sessions at the moment, but we have nothing scheduled. Check back soon and keep your eye out for emails.")
+#       courses_planned <- FALSE
+#       
+#     } else {
+#       out_df <- signup_temp[idx,]
+#   }}
 
+# remove this eventually
 
+courses_planned <- TRUE
+
+if(courses_planned){
+  out_df <- signup
+  }else{
+  out_df <- data.frame("Course" =" We are planning new training sessions at the moment, but we have nothing scheduled. Check back soon and keep your eye out for emails.")
+}
 
 if(courses_planned){
 
