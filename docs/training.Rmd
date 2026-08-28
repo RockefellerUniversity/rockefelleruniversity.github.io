@@ -55,39 +55,6 @@ Upcoming, graduate school and the full course list is available below.
 
 All material for courses is hosted publicly and links to issues pages for support our listed within the relevant training pages. <br/><br/>
 
-### Computational Biology Fortnight
-
-To kick-off 2026 we will be hosting the first Rockefeller University Computational Biology Fortnight. Over these two weeks the BRC will host a series of workshops and talks with the help of the Vertebrate Genome Laboratory and The Rita & Frits Markus Library. See our poster advert [here](summary.pdf). Register for events below:
-
-```{r compbioweek, echo=FALSE}
-
-course <- c("Intro to C and C++","Intro To Python","Intro To R")
-dates <- c("January 26/28/30 2026",
-           "January 27/29 2026",
-           "Feburary 04/05 2026")
-time <- "9.30-4.30"
-signups <-c("https://registration.rockefeller.edu/Introduction_to_Cpp_2026",
-           "https://registration.rockefeller.edu/Introduction_To_Python_2026",
-           "https://registration.rockefeller.edu/Introduction_To_R_2026")
-materials <- c("placeholder.html",
-               "https://rockefelleruniversity.github.io/Intro_To_Python/",
-               "https://rockefelleruniversity.github.io/Intro_To_R_1Day/")
-
-data.frame("Course" = course,
-           "Dates" = dates,
-           "Time" = time,
-           "SignUp" = paste0("<a href=\"",signups,"\">Link</a>"),
-           "Material" = paste0("<a href=\"",materials,"\">Link</a>")) %>%
-  datatable(escape = FALSE)
-
-# coursesTable %>%
-#   filter(Public_Dates != "") %>%
-#   select(Courses,Start_Date=Public_Dates, SignUp=SignUp, Material=Links) %>%
-#   mutate(Material=paste0("<a href=\"",Material,"\">Link</a>"),
-#          SignUp=paste0("<a href=\"",SignUp,"\">Register</a>")) %>%
-#   datatable(escape = FALSE)
-```
-
 ### Upcoming
 
 The Bioinformatics Resource Center will be running the below courses in the near future.
