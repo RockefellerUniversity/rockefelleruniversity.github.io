@@ -29,7 +29,7 @@ If you have a question about present or future analysis or require analysis supp
 
 ## **Full list of authorships for BRC members**
 
-```{r,echo=FALSE}
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
 
 scholarIDs <- c("W_54zuEAAAAJ&hl","M4z_6poAAAAJ","H5XCHi0AAAAJ",
                 "4wmnEI4AAAAJ","nnaXNlgAAAAJ")
@@ -46,7 +46,8 @@ tidyPubs <- function(x){
 # Google Scholar has no API and blocks datacenter IPs, so get_publications()
 # often returns a bare NA when run from CI. Keep only the real data frames.
 fetched <- lapply(scholarIDs, function(id){
-  res <- tryCatch(get_publications(id), error = function(e) NULL)
+  # scholar warns once per failed retry before it gives up and returns NA
+  res <- suppressWarnings(tryCatch(get_publications(id), error = function(e) NULL))
   if (is.data.frame(res) && nrow(res) > 0) res else NULL
 })
 fetched <- Filter(Negate(is.null), fetched)
