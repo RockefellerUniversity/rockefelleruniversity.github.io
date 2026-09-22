@@ -31,17 +31,43 @@ If you have a question about present or future analysis or require analysis supp
 
 ```{r,echo=FALSE}
 
-tomP <- get_publications("W_54zuEAAAAJ&hl")
-mattP <- get_publications("M4z_6poAAAAJ")
-dougP <- get_publications("H5XCHi0AAAAJ")
-jidungP <-  get_publications("4wmnEI4AAAAJ")
-weP <- get_publications("nnaXNlgAAAAJ")
-allPubs <- list(tomP,mattP,dougP,jidungP,weP) %>% 
-  do.call(rbind,.) %>% 
-  distinct %>% 
-  select(title,author,journal,year) %>% 
-  distinct %>% 
-  arrange(desc(year))
+scholarIDs <- c("W_54zuEAAAAJ&hl","M4z_6poAAAAJ","H5XCHi0AAAAJ",
+                "4wmnEI4AAAAJ","nnaXNlgAAAAJ")
+pubCache <- "publications.csv"
 
-datatable(allPubs,rownames = FALSE)
+tidyPubs <- function(x){
+  x %>%
+    distinct %>%
+    select(title,author,journal,year) %>%
+    distinct %>%
+    arrange(desc(year))
+}
+
+# Google Scholar has no API and blocks datacenter IPs, so get_publications()
+# often returns a bare NA when run from CI. Keep only the real data frames.
+fetched <- lapply(scholarIDs, function(id){
+  res <- tryCatch(get_publications(id), error = function(e) NULL)
+  if (is.data.frame(res) && nrow(res) > 0) res else NULL
+})
+fetched <- Filter(Negate(is.null), fetched)
+
+if (length(fetched) == length(scholarIDs)) {
+  # Every profile answered, so this is a complete list - refresh the cache.
+  allPubs <- tidyPubs(do.call(rbind, fetched))
+  write.csv(allPubs, pubCache, row.names = FALSE)
+} else if (file.exists(pubCache)) {
+  # Partial or empty fetch. A partial list would drop whole authors, so prefer
+  # the last complete one and leave the cache untouched.
+  allPubs <- read.csv(pubCache, stringsAsFactors = FALSE)
+} else if (length(fetched) > 0) {
+  allPubs <- tidyPubs(do.call(rbind, fetched))
+} else {
+  allPubs <- NULL
+}
+
+if (is.null(allPubs)) {
+  knitr::asis_output("*The publication list is temporarily unavailable.*")
+} else {
+  datatable(allPubs, rownames = FALSE)
+}
 ```

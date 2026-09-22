@@ -28,7 +28,7 @@ library(stringr)
 
 ```{r loadcourses,include=FALSE, warning=F, message=F}
 # this pulls from csv here: http://35.174.176.135/issues/2855
-signup <- read.csv("~/Desktop/Training_Courses_BRC_MP.csv")
+signup <- read.csv("Training_Courses_BRC_MP.csv")
 coursesTable <- fromJSON("course.json")
 instructorTable <- fromJSON("instructors.json")
 
