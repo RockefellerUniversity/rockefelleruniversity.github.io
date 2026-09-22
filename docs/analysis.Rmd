@@ -55,11 +55,11 @@ fetched <- Filter(Negate(is.null), fetched)
 if (length(fetched) == length(scholarIDs)) {
   # Every profile answered, so this is a complete list - refresh the cache.
   allPubs <- tidyPubs(do.call(rbind, fetched))
-  write.csv(allPubs, pubCache, row.names = FALSE)
+  write.csv(allPubs, pubCache, row.names = FALSE, fileEncoding = "UTF-8")
 } else if (file.exists(pubCache)) {
   # Partial or empty fetch. A partial list would drop whole authors, so prefer
   # the last complete one and leave the cache untouched.
-  allPubs <- read.csv(pubCache, stringsAsFactors = FALSE)
+  allPubs <- read.csv(pubCache, stringsAsFactors = FALSE, encoding = "UTF-8")
 } else if (length(fetched) > 0) {
   allPubs <- tidyPubs(do.call(rbind, fetched))
 } else {
