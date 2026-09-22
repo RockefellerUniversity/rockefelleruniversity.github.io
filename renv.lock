@@ -644,6 +644,16 @@
         "rlang"
       ]
     },
+    "lubridate": {
+      "Package": "lubridate",
+      "Version": "1.8.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2ff5eedb6ee38fb1b81205c73be1be5a",
+      "Requirements": [
+        "generics"
+      ]
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.2",
@@ -767,6 +777,22 @@
       "Repository": "CRAN",
       "Hash": "5e3c5dc0b071b21fa128676560dbe94d",
       "Requirements": []
+    },
+    "redmineR": {
+      "Package": "redmineR",
+      "Version": "0.3.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "openanalytics",
+      "RemoteRepo": "redmineR",
+      "RemoteRef": "master",
+      "RemoteSha": "d94b314648d53c05bb699ea656923b470e8ee321",
+      "Requirements": [
+        "httr",
+        "jsonlite",
+        "mime"
+      ]
     },
     "renv": {
       "Package": "renv",

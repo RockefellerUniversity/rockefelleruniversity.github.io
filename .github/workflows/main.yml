@@ -37,12 +37,11 @@ jobs:
       #     libsodium-dev \
       #     libxml2-dev
           
+      - name: Check renv library is complete
+        run: Rscript -e "renv::status()"
+
       - name: Render site
-        run: |
-          Rscript -e "install.packages(c('remotes'))"
-          Rscript -e "install.packages(c('rmarkdown','ymlthis','magrittr','dplyr','DT','jsonlite','yaml','scholar','lubridate','stringr'))"
-          Rscript -e "remotes::install_github('openanalytics/redmineR')"
-          Rscript docs/makeSite.R
+        run: Rscript docs/makeSite.R
       - name: Commit
         run: |
           git config --global user.name "ThomasCarroll"
